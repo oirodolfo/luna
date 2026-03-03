@@ -1,9 +1,10 @@
 {
   "name": "shader-toy-player",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Shader toy player",
   "luna": {
     "icon": true,
+    "react": true,
     "vue": true,
     "test": false
   }

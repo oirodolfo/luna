@@ -380,12 +380,12 @@
   },
   "shader-toy-player": {
     "icon": true,
+    "react": true,
     "vue": true,
     "test": false,
-    "version": "0.5.1",
+    "version": "0.6.0",
     "style": true,
     "install": false,
-    "react": false,
     "dependencies": []
   },
   "split-pane": {

@@ -5,6 +5,7 @@ import story from '../share/story'
 import $ from 'licia/$'
 import shaders, { cube } from './shaders'
 import LunaShaderToyPlayer from './vue'
+import LunaShaderToyPlayerReact from './react'
 import { h } from 'vue'
 import { text, optionsKnob, button, boolean } from '@storybook/addon-knobs'
 
@@ -59,6 +60,32 @@ const def = story(
           shaderToyPlayer = instance
         },
       })
+    },
+    ReactComponent() {
+      const { example, renderPass, controls } = createKnobs()
+      let shaderToyPlayer
+
+      button('Compile', function () {
+        shaderToyPlayer.setOption('renderPass', renderPass)
+        return false
+      })
+
+      return (
+        <LunaShaderToyPlayerReact
+          renderPass={example}
+          controls={controls}
+          style={{
+            maxWidth: '640px',
+            width: '100%',
+            margin: '0 auto',
+            minHeight: '150px',
+            aspectRatio: '1280/720',
+          }}
+          onCreate={(instance) => {
+            shaderToyPlayer = instance
+          }}
+        />
+      )
     },
   }
 )
@@ -122,4 +149,4 @@ function createKnobs() {
 
 export default def
 
-export const { shaderToyPlayer: html, vue } = def
+export const { shaderToyPlayer: html, vue, react } = def
