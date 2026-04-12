@@ -1,6 +1,7 @@
 node_modules/
 dist/
 coverage/
+references/
 .storybook/out/
 package-lock.json
 webpack.config.js

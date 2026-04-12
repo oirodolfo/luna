@@ -80,6 +80,7 @@ function getIcons() {
     {
       src: '/logo.png',
       name: 'Luna - "UI library"',
+      title: 'Luna - UI library',
     },
     {
       src: '/pic1.png',

@@ -32,6 +32,8 @@ export interface IOptions extends IComponentOptions {
 export interface IIcon {
   src: string
   name: string
+  /** Title shown on hover. */
+  title?: string
   style?: types.PlainObj<any>
 }
 
@@ -322,14 +324,15 @@ export class Icon {
   }
   render() {
     const { data, $container } = this
-    const { src, name } = data
+    const { src, name, title } = data
+    const titleAttr = title ? ` title="${escape(title)}"` : ''
 
     $container.append(
       this.iconList.c(`
-      <div class="icon">
+      <div class="icon"${titleAttr}>
         <img src="${src}" draggable="false"></img>
       </div>
-      <div class="name" title="${escape(name)}">
+      <div class="name"${titleAttr}>
         <div class="name-wrapper">${name}</div>
       </div>
     `)
