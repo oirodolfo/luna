@@ -327,12 +327,14 @@ export class Icon {
     const { src, name, title } = data
     const titleAttr = title ? ` title="${escape(title)}"` : ''
 
+    const nameTitleAttr = ` title="${escape(title || name)}"`
+
     $container.append(
       this.iconList.c(`
       <div class="icon"${titleAttr}>
         <img src="${src}" draggable="false"></img>
       </div>
-      <div class="name"${titleAttr}>
+      <div class="name"${nameTitleAttr}>
         <div class="name-wrapper">${name}</div>
       </div>
     `)
