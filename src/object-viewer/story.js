@@ -1,8 +1,8 @@
 import 'luna-object-viewer.css'
 import ObjectViewer, { Static } from 'luna-object-viewer.js'
-import stringifyAll from 'licia/stringifyAll'
+import stringifyAll from '../share/native/compat/stringifyAll'
 import readme from './README.md'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean } from '../share/storybook/knobs'
 import story from '../share/story'
 import LunaObjectViewer from './react'
 

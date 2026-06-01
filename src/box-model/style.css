@@ -1,0 +1,119 @@
+@import "../share/design-system/theme.css";
+
+.luna-box-model {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-box-model.hidden,
+.luna-box-model .hidden {
+  display: none !important;
+}
+.luna-box-model.invisible,
+.luna-box-model .invisible {
+  visibility: hidden;
+}
+.luna-box-model * {
+  box-sizing: border-box;
+}
+.luna-box-model.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+.luna-box-model {
+  font-size: 12px;
+}
+
+.label {
+  position: absolute;
+  margin-left: 3px;
+  padding: 0 2px;
+}
+
+.top,
+.left,
+.right,
+.bottom {
+  display: inline-block;
+}
+
+.left,
+.right {
+  vertical-align: middle;
+}
+
+.position,
+.margin,
+.border,
+.padding,
+.content {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 3px;
+  margin: 3px;
+  color: rgba(0, 0, 0, 0.88);
+  background: #ffffff;
+}
+
+.position {
+  border: 1px grey dotted;
+}
+
+.margin {
+  border: 1px dashed;
+}
+.margin.highlighted {
+  color: rgba(0, 0, 0, 0.88) !important;
+  background: rgba(246, 178, 107, 0.66) !important;
+}
+
+.border {
+  border: 1px #000 solid;
+}
+.border.highlighted {
+  color: rgba(0, 0, 0, 0.88) !important;
+  background: rgba(255, 229, 153, 0.66) !important;
+}
+
+.padding {
+  border: 1px grey dashed;
+}
+.padding.highlighted {
+  color: rgba(0, 0, 0, 0.88) !important;
+  background: rgba(147, 196, 125, 0.55) !important;
+}
+
+.content {
+  border: 1px grey solid;
+  min-width: 100px;
+}
+.content.highlighted {
+  color: rgba(0, 0, 0, 0.88) !important;
+  background: rgba(111, 168, 220, 0.66) !important;
+}
+
+.theme-dark .position,
+.theme-dark .margin,
+.theme-dark .border,
+.theme-dark .padding,
+.theme-dark .content {
+  color: rgba(255, 255, 255, 0.85);
+  background: #141414;
+}
+.theme-dark .border {
+  border-color: grey;
+}

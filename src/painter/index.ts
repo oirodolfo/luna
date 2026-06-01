@@ -1,10 +1,10 @@
 import Component, { IComponentOptions } from '../share/Component'
-import stripIndent from 'licia/stripIndent'
-import $ from 'licia/$'
-import each from 'licia/each'
-import ResizeSensor from 'licia/ResizeSensor'
-import types from 'licia/types'
-import pointerEvent from 'licia/pointerEvent'
+import stripIndent from '../share/native/compat/stripIndent'
+import $ from '../share/native/compat/$'
+import each from '../share/native/compat/each'
+import ResizeSensor from '../share/native/compat/ResizeSensor'
+import types from '../share/native/compat/types'
+import pointerEvent from '../share/native/compat/pointerEvent'
 import { exportCjs, measuredScrollbarWidth } from '../share/util'
 import {
   Brush,
@@ -17,8 +17,8 @@ import {
   Tool,
 } from './tools'
 import { duplicateCanvas } from './util'
-import isHidden from 'licia/isHidden'
-import I18n from 'licia/I18n'
+import isHidden from '../share/native/compat/isHidden'
+import I18n from '../share/native/compat/I18n'
 
 const $document = $(document as any)
 

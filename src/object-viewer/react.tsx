@@ -1,7 +1,7 @@
 import { CSSProperties, FC, useEffect, useRef } from 'react'
 import ObjectViewer, { IOptions } from './index'
-import each from 'licia/each'
-import clone from 'licia/clone'
+import each from '../share/native/compat/each'
+import clone from '../share/native/compat/clone'
 import { useNonInitialEffect } from '../share/hooks'
 
 interface IObjectViewerProps extends IOptions {

@@ -1,4 +1,4 @@
-import upperFirst from 'licia/upperFirst'
+import upperFirst from '../share/native/compat/upperFirst'
 
 export function getObjType(obj: any) {
   if (obj.constructor && obj.constructor.name) return obj.constructor.name

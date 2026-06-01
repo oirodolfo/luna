@@ -1,0 +1,539 @@
+@import "../share/design-system/theme.css";
+
+.luna-logcat {
+  unicode-bidi: embed;
+  position: relative;
+  line-height: 1.5em;
+  border: 1px solid;
+  white-space: pre;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-logcat.hidden,
+.luna-logcat .hidden {
+  display: none !important;
+}
+.luna-logcat.invisible,
+.luna-logcat .invisible {
+  visibility: hidden;
+}
+.luna-logcat * {
+  box-sizing: border-box;
+}
+.luna-logcat.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+.luna-logcat {
+  user-select: text;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}
+.luna-logcat.wrap-long-lines {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.luna-logcat.wrap-long-lines .message {
+  display: inline;
+}
+
+.entry {
+  padding-left: 4px;
+  font-size: 12px;
+}
+
+.date,
+.pid,
+.tag,
+.package,
+.priority {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.message {
+  display: inline-block;
+}
+
+.wrap-long-lines .message {
+  display: inline;
+}
+
+.date {
+  margin-right: 4px;
+}
+
+.pid {
+  width: 100px;
+  text-align: center;
+}
+
+.tag,
+.package {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
+}
+
+.priority {
+  padding: 0 8px;
+}
+
+.theme-light {
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+.theme-light .W .priority {
+  background-color: #faad14;
+  background-color: var(--luna-color-warning-text, #faad14);
+}
+.theme-light .W .message {
+  color: #faad14;
+  color: var(--luna-color-warning-text, #faad14);
+}
+.theme-light .E .priority {
+  background-color: #ff4d4f;
+  background-color: var(--luna-color-error-text, #ff4d4f);
+}
+.theme-light .E .message {
+  color: #ff4d4f;
+  color: var(--luna-color-error-text, #ff4d4f);
+}
+.theme-light .D .priority {
+  background-color: #52c41a;
+  background-color: var(--luna-color-success-text, #52c41a);
+}
+.theme-light .I .priority {
+  background-color: #1677ff;
+  background-color: var(--luna-color-info-text, #1677ff);
+}
+.theme-light .color-blue-6 {
+  color: #1677ff;
+}
+.theme-light .color-blue-7 {
+  color: #0958d9;
+}
+.theme-light .color-blue-8 {
+  color: #003eb3;
+}
+.theme-light .color-blue-9 {
+  color: #002c8c;
+}
+.theme-light .color-blue-10 {
+  color: #001d66;
+}
+.theme-light .color-purple-6 {
+  color: #722ed1;
+}
+.theme-light .color-purple-7 {
+  color: #531dab;
+}
+.theme-light .color-purple-8 {
+  color: #391085;
+}
+.theme-light .color-purple-9 {
+  color: #22075e;
+}
+.theme-light .color-purple-10 {
+  color: #120338;
+}
+.theme-light .color-cyan-6 {
+  color: #13c2c2;
+}
+.theme-light .color-cyan-7 {
+  color: #08979c;
+}
+.theme-light .color-cyan-8 {
+  color: #006d75;
+}
+.theme-light .color-cyan-9 {
+  color: #00474f;
+}
+.theme-light .color-cyan-10 {
+  color: #002329;
+}
+.theme-light .color-green-6 {
+  color: #52c41a;
+}
+.theme-light .color-green-7 {
+  color: #389e0d;
+}
+.theme-light .color-green-8 {
+  color: #237804;
+}
+.theme-light .color-green-9 {
+  color: #135200;
+}
+.theme-light .color-green-10 {
+  color: #092b00;
+}
+.theme-light .color-magenta-6 {
+  color: #eb2f96;
+}
+.theme-light .color-magenta-7 {
+  color: #c41d7f;
+}
+.theme-light .color-magenta-8 {
+  color: #9e1068;
+}
+.theme-light .color-magenta-9 {
+  color: #780650;
+}
+.theme-light .color-magenta-10 {
+  color: #520339;
+}
+.theme-light .color-pink-6 {
+  color: #eb2f96;
+}
+.theme-light .color-pink-7 {
+  color: #c41d7f;
+}
+.theme-light .color-pink-8 {
+  color: #9e1068;
+}
+.theme-light .color-pink-9 {
+  color: #780650;
+}
+.theme-light .color-pink-10 {
+  color: #520339;
+}
+.theme-light .color-red-6 {
+  color: #f5222d;
+}
+.theme-light .color-red-7 {
+  color: #cf1322;
+}
+.theme-light .color-red-8 {
+  color: #a8071a;
+}
+.theme-light .color-red-9 {
+  color: #820014;
+}
+.theme-light .color-red-10 {
+  color: #5c0011;
+}
+.theme-light .color-orange-6 {
+  color: #fa8c16;
+}
+.theme-light .color-orange-7 {
+  color: #d46b08;
+}
+.theme-light .color-orange-8 {
+  color: #ad4e00;
+}
+.theme-light .color-orange-9 {
+  color: #873800;
+}
+.theme-light .color-orange-10 {
+  color: #612500;
+}
+.theme-light .color-yellow-6 {
+  color: #fadb14;
+}
+.theme-light .color-yellow-7 {
+  color: #d4b106;
+}
+.theme-light .color-yellow-8 {
+  color: #ad8b00;
+}
+.theme-light .color-yellow-9 {
+  color: #876800;
+}
+.theme-light .color-yellow-10 {
+  color: #614700;
+}
+.theme-light .color-volcano-6 {
+  color: #fa541c;
+}
+.theme-light .color-volcano-7 {
+  color: #d4380d;
+}
+.theme-light .color-volcano-8 {
+  color: #ad2102;
+}
+.theme-light .color-volcano-9 {
+  color: #871400;
+}
+.theme-light .color-volcano-10 {
+  color: #610b00;
+}
+.theme-light .color-geekblue-6 {
+  color: #2f54eb;
+}
+.theme-light .color-geekblue-7 {
+  color: #1d39c4;
+}
+.theme-light .color-geekblue-8 {
+  color: #10239e;
+}
+.theme-light .color-geekblue-9 {
+  color: #061178;
+}
+.theme-light .color-geekblue-10 {
+  color: #030852;
+}
+.theme-light .color-gold-6 {
+  color: #faad14;
+}
+.theme-light .color-gold-7 {
+  color: #d48806;
+}
+.theme-light .color-gold-8 {
+  color: #ad6800;
+}
+.theme-light .color-gold-9 {
+  color: #874d00;
+}
+.theme-light .color-gold-10 {
+  color: #613400;
+}
+.theme-light .color-lime-6 {
+  color: #a0d911;
+}
+.theme-light .color-lime-7 {
+  color: #7cb305;
+}
+.theme-light .color-lime-8 {
+  color: #5b8c00;
+}
+.theme-light .color-lime-9 {
+  color: #3f6600;
+}
+.theme-light .color-lime-10 {
+  color: #254000;
+}
+
+.theme-dark {
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}
+.theme-dark .W .priority {
+  background-color: #d89614;
+  background-color: var(--luna-color-warning-text, #d89614);
+}
+.theme-dark .W .message {
+  color: #d89614;
+  color: var(--luna-color-warning-text, #d89614);
+}
+.theme-dark .E .priority {
+  background-color: #dc4446;
+  background-color: var(--luna-color-error-text, #dc4446);
+}
+.theme-dark .E .message {
+  color: #dc4446;
+  color: var(--luna-color-error-text, #dc4446);
+}
+.theme-dark .D .priority {
+  background-color: #49aa19;
+  background-color: var(--luna-color-success-text, #49aa19);
+}
+.theme-dark .I .priority {
+  background-color: #1668dc;
+  background-color: var(--luna-color-info-text, #1668dc);
+}
+.theme-dark .color-blue-6 {
+  color: #1668dc;
+}
+.theme-dark .color-blue-7 {
+  color: #3c89e8;
+}
+.theme-dark .color-blue-8 {
+  color: #65a9f3;
+}
+.theme-dark .color-blue-9 {
+  color: #8dc5f8;
+}
+.theme-dark .color-blue-10 {
+  color: #b7dcfa;
+}
+.theme-dark .color-purple-6 {
+  color: #642ab5;
+}
+.theme-dark .color-purple-7 {
+  color: #854eca;
+}
+.theme-dark .color-purple-8 {
+  color: #ab7ae0;
+}
+.theme-dark .color-purple-9 {
+  color: #cda8f0;
+}
+.theme-dark .color-purple-10 {
+  color: #ebd7fa;
+}
+.theme-dark .color-cyan-6 {
+  color: #13a8a8;
+}
+.theme-dark .color-cyan-7 {
+  color: #33bcb7;
+}
+.theme-dark .color-cyan-8 {
+  color: #58d1c9;
+}
+.theme-dark .color-cyan-9 {
+  color: #84e2d8;
+}
+.theme-dark .color-cyan-10 {
+  color: #b2f1e8;
+}
+.theme-dark .color-green-6 {
+  color: #49aa19;
+}
+.theme-dark .color-green-7 {
+  color: #6abe39;
+}
+.theme-dark .color-green-8 {
+  color: #8fd460;
+}
+.theme-dark .color-green-9 {
+  color: #b2e58b;
+}
+.theme-dark .color-green-10 {
+  color: #d5f2bb;
+}
+.theme-dark .color-magenta-6 {
+  color: #cb2b83;
+}
+.theme-dark .color-magenta-7 {
+  color: #e0529c;
+}
+.theme-dark .color-magenta-8 {
+  color: #f37fb7;
+}
+.theme-dark .color-magenta-9 {
+  color: #f8a8cc;
+}
+.theme-dark .color-magenta-10 {
+  color: #fad2e3;
+}
+.theme-dark .color-pink-6 {
+  color: #cb2b83;
+}
+.theme-dark .color-pink-7 {
+  color: #e0529c;
+}
+.theme-dark .color-pink-8 {
+  color: #f37fb7;
+}
+.theme-dark .color-pink-9 {
+  color: #f8a8cc;
+}
+.theme-dark .color-pink-10 {
+  color: #fad2e3;
+}
+.theme-dark .color-red-6 {
+  color: #d32029;
+}
+.theme-dark .color-red-7 {
+  color: #e84749;
+}
+.theme-dark .color-red-8 {
+  color: #f37370;
+}
+.theme-dark .color-red-9 {
+  color: #f89f9a;
+}
+.theme-dark .color-red-10 {
+  color: #fac8c3;
+}
+.theme-dark .color-orange-6 {
+  color: #d87a16;
+}
+.theme-dark .color-orange-7 {
+  color: #e89a3c;
+}
+.theme-dark .color-orange-8 {
+  color: #f3b765;
+}
+.theme-dark .color-orange-9 {
+  color: #f8cf8d;
+}
+.theme-dark .color-orange-10 {
+  color: #fae3b7;
+}
+.theme-dark .color-yellow-6 {
+  color: #d8bd14;
+}
+.theme-dark .color-yellow-7 {
+  color: #e8d639;
+}
+.theme-dark .color-yellow-8 {
+  color: #f3ea62;
+}
+.theme-dark .color-yellow-9 {
+  color: #f8f48b;
+}
+.theme-dark .color-yellow-10 {
+  color: #fafab5;
+}
+.theme-dark .color-volcano-6 {
+  color: #d84a1b;
+}
+.theme-dark .color-volcano-7 {
+  color: #e87040;
+}
+.theme-dark .color-volcano-8 {
+  color: #f3956a;
+}
+.theme-dark .color-volcano-9 {
+  color: #f8b692;
+}
+.theme-dark .color-volcano-10 {
+  color: #fad4bc;
+}
+.theme-dark .color-geekblue-6 {
+  color: #2b4acb;
+}
+.theme-dark .color-geekblue-7 {
+  color: #5273e0;
+}
+.theme-dark .color-geekblue-8 {
+  color: #7f9ef3;
+}
+.theme-dark .color-geekblue-9 {
+  color: #a8c1f8;
+}
+.theme-dark .color-geekblue-10 {
+  color: #d2e0fa;
+}
+.theme-dark .color-gold-6 {
+  color: #d89614;
+}
+.theme-dark .color-gold-7 {
+  color: #e8b339;
+}
+.theme-dark .color-gold-8 {
+  color: #f3cc62;
+}
+.theme-dark .color-gold-9 {
+  color: #f8df8b;
+}
+.theme-dark .color-gold-10 {
+  color: #faedb5;
+}
+.theme-dark .color-lime-6 {
+  color: #8bbb11;
+}
+.theme-dark .color-lime-7 {
+  color: #a9d134;
+}
+.theme-dark .color-lime-8 {
+  color: #c9e75d;
+}
+.theme-dark .color-lime-9 {
+  color: #e4f88b;
+}
+.theme-dark .color-lime-10 {
+  color: #f0fab5;
+}

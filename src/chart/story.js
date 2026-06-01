@@ -1,9 +1,9 @@
 import Chart from 'luna-chart.js'
 import readme from './README.md'
 import story from '../share/story'
-import { object, color } from '@storybook/addon-knobs'
-import h from 'licia/h'
-import $ from 'licia/$'
+import { object, color } from '../share/storybook/knobs'
+import h from '../share/native/compat/h'
+import $ from '../share/native/compat/$'
 import { px } from './util'
 import { red5, purple5, orange5, blue5, green5 } from '../share/theme'
 

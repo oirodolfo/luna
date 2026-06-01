@@ -1,11 +1,11 @@
 import 'luna-console.css'
-import h from 'licia/h'
-import $ from 'licia/$'
-import toEl from 'licia/toEl'
+import h from '../share/native/compat/h'
+import $ from '../share/native/compat/$'
+import toEl from '../share/native/compat/toEl'
 import Console from 'luna-console.js'
 import readme from './README.md'
 import changelog from './CHANGELOG.md'
-import { button, number, boolean, text, array } from '@storybook/addon-knobs'
+import { button, number, boolean, text, array } from '../share/storybook/knobs'
 import story from '../share/story'
 
 const def = story(

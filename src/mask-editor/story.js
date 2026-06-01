@@ -1,13 +1,13 @@
 import MaskEditor from 'luna-mask-editor.js'
 import Painter from 'luna-painter.js'
 import story from '../share/story'
-import $ from 'licia/$'
-import h from 'licia/h'
+import $ from '../share/native/compat/$'
+import h from '../share/native/compat/h'
 import readme from './README.md'
 import LunaMaskEditor from './react'
-import { text, files } from '@storybook/addon-knobs'
+import { text, files } from '../share/storybook/knobs'
 import { useRef } from 'react'
-import isEmpty from 'licia/isEmpty'
+import isEmpty from '../share/native/compat/isEmpty'
 
 const def = story(
   'mask-editor',

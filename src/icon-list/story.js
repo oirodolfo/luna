@@ -3,8 +3,8 @@ import story from '../share/story'
 import IconList from 'luna-icon-list.js'
 import readme from './README.md'
 import LunaIconList from './react'
-import $ from 'licia/$'
-import { number, text, boolean } from '@storybook/addon-knobs'
+import $ from '../share/native/compat/$'
+import { number, text, boolean } from '../share/storybook/knobs'
 import { red5 } from '../share/theme'
 
 const def = story(

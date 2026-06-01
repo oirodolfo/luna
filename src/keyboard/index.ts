@@ -1,10 +1,10 @@
 import Component from '../share/Component'
-import stripIndent from 'licia/stripIndent'
+import stripIndent from '../share/native/compat/stripIndent'
 import { exportCjs } from '../share/util'
-import pointerEvent from 'licia/pointerEvent'
-import $ from 'licia/$'
-import toNum from 'licia/toNum'
-import types from 'licia/types'
+import pointerEvent from '../share/native/compat/pointerEvent'
+import $ from '../share/native/compat/$'
+import toNum from '../share/native/compat/toNum'
+import types from '../share/native/compat/types'
 
 /**
  * Virtual keyboard.

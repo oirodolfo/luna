@@ -1,7 +1,7 @@
 import Component, { IComponentOptions } from '../share/Component'
 import LunaPainter, { Layer, Zoom, Hand } from 'luna-painter'
-import debounce from 'licia/debounce'
-import Color from 'licia/Color'
+import debounce from '../share/native/compat/debounce'
+import Color from '../share/native/compat/Color'
 import { exportCjs, loadImage } from '../share/util'
 
 /** IOptions */

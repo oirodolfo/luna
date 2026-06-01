@@ -1,9 +1,9 @@
 import Log from 'luna-log.js'
 import readme from './README.md'
 import story from '../share/story'
-import ansiColor from 'licia/ansiColor'
+import ansiColor from '../share/native/compat/ansiColor'
 import LunaLog from './react'
-import { text, boolean, number, button } from '@storybook/addon-knobs'
+import { text, boolean, number, button } from '../share/storybook/knobs'
 import buildLog from '!!raw-loader!./build.log'
 
 const def = story(

@@ -1,8 +1,8 @@
 import { CSSProperties, FC, useEffect, useRef } from 'react'
 import Painter, { IOptions } from './index'
 import { useOption } from '../share/hooks'
-import clone from 'licia/clone'
-import each from 'licia/each'
+import clone from '../share/native/compat/clone'
+import each from '../share/native/compat/each'
 
 interface IPainterProps extends IOptions {
   style?: CSSProperties

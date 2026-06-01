@@ -1,6 +1,6 @@
 import { CSSProperties, FC, useEffect, useRef } from 'react'
 import ImageViewer, { IOptions } from './index'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 import { useOption } from '../share/hooks'
 
 interface IImageViewerProps extends IOptions {

@@ -1,6 +1,6 @@
 import DragSelector from './index'
 import test from '../share/test'
-import h from 'licia/h'
+import h from '../share/native/compat/h'
 
 test('drag-selector', (container) => {
   const item = h('div')

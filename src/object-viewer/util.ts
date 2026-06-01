@@ -1,6 +1,6 @@
-import toStr from 'licia/toStr'
-import trim from 'licia/trim'
-import escape from 'licia/escape'
+import toStr from '../share/native/compat/toStr'
+import trim from '../share/native/compat/trim'
+import escape from '../share/native/compat/escape'
 
 export const encode = (val: any) => {
   return escape(toStr(val))

@@ -4,7 +4,7 @@ import LunaModal from './react'
 import readme from './README.md'
 import changelog from './CHANGELOG.md'
 import story from '../share/story'
-import { text, button, number } from '@storybook/addon-knobs'
+import { text, button, number } from '../share/storybook/knobs'
 import { useState } from 'react'
 
 const def = story(

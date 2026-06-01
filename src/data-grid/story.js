@@ -3,10 +3,10 @@ import DataGrid from 'luna-data-grid'
 import story from '../share/story'
 import readme from './README.md'
 import changelog from './CHANGELOG.md'
-import each from 'licia/each'
-import toEl from 'licia/toEl'
+import each from '../share/native/compat/each'
+import toEl from '../share/native/compat/toEl'
 import LunaDataGrid from './react'
-import { number, button, text } from '@storybook/addon-knobs'
+import { number, button, text } from '../share/storybook/knobs'
 import { useRef, useState } from 'react'
 
 const def = story(

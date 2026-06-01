@@ -1,8 +1,8 @@
 import { FC, useEffect, useRef } from 'react'
 import PerformanceMonitor, { IOptions } from './index'
 import { useOption } from '../share/hooks'
-import each from 'licia/each'
-import clone from 'licia/clone'
+import each from '../share/native/compat/each'
+import clone from '../share/native/compat/clone'
 
 const LunaPerformanceMonitor: FC<IOptions> = (props) => {
   const performanceMonitorRef = useRef<HTMLDivElement>(null)

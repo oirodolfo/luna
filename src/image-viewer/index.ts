@@ -1,13 +1,13 @@
 import Component, { IComponentOptions } from '../share/Component'
 import { exportCjs, eventPage } from '../share/util'
-import ResizeSensor from 'licia/ResizeSensor'
-import $ from 'licia/$'
-import pointerEvent from 'licia/pointerEvent'
-import raf from 'licia/raf'
-import loadImg from 'licia/loadImg'
-import isHidden from 'licia/isHidden'
-import debounce from 'licia/debounce'
-import isStr from 'licia/isStr'
+import ResizeSensor from '../share/native/compat/ResizeSensor'
+import $ from '../share/native/compat/$'
+import pointerEvent from '../share/native/compat/pointerEvent'
+import raf from '../share/native/compat/raf'
+import loadImg from '../share/native/compat/loadImg'
+import isHidden from '../share/native/compat/isHidden'
+import debounce from '../share/native/compat/debounce'
+import isStr from '../share/native/compat/isStr'
 
 const $document = $(document as any)
 

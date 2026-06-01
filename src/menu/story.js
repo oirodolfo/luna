@@ -1,10 +1,10 @@
 import 'luna-menu.css'
 import Menu from 'luna-menu.js'
-import cloneDeep from 'licia/cloneDeep'
+import cloneDeep from '../share/native/compat/cloneDeep'
 import readme from './README.md'
 import story from '../share/story'
 import { eventClient } from '../share/util'
-import { object } from '@storybook/addon-knobs'
+import { object } from '../share/storybook/knobs'
 
 const def = story(
   'menu',

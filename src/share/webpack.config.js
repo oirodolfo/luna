@@ -1,13 +1,19 @@
 const path = require('path')
+const { presetMini } = require('unocss')
+const { createGenerator } = require('@unocss/core')
 const prefixer = require('postcss-prefixer')
 const autoprefixer = require('autoprefixer')
 const clean = require('postcss-clean')
-const camelCase = require('licia/camelCase')
-const upperFirst = require('licia/upperFirst')
-const each = require('licia/each')
+const camelCase = require('./native/compat/camelCase')
+const upperFirst = require('./native/compat/upperFirst')
+const each = require('./native/compat/each')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
+const uno = createGenerator({
+  presets: [presetMini()],
+})
 
 module.exports = function (
   name,
@@ -17,6 +23,9 @@ module.exports = function (
     loader: 'postcss-loader',
     options: {
       plugins: [
+        require('@unocss/postcss')({
+          uno,
+        }),
         prefixer({
           prefix: `luna-${name}-`,
           ignore: [`luna-`],
@@ -29,7 +38,7 @@ module.exports = function (
 
   const entry = [`./src/${name}/index.ts`]
   if (hasStyle) {
-    entry.unshift(`./src/${name}/style.scss`)
+    entry.unshift(`./src/${name}/style.css`)
   }
   if (useIcon) {
     entry.unshift(`./src/${name}/icon.css`)
@@ -77,15 +86,6 @@ module.exports = function (
           {
             test: /\.ts$/,
             loader: 'ts-loader',
-          },
-          {
-            test: /\.scss/,
-            loaders: [
-              MiniCssExtractPlugin.loader,
-              'css-loader',
-              postcssLoader,
-              'sass-loader',
-            ],
           },
           {
             test: /\.css/,

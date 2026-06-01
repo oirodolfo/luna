@@ -1,0 +1,132 @@
+@import "../share/design-system/theme.css";
+
+.luna-audio-player {
+  border: 1px solid;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-audio-player.hidden,
+.luna-audio-player .hidden {
+  display: none !important;
+}
+.luna-audio-player.invisible,
+.luna-audio-player .invisible {
+  visibility: hidden;
+}
+.luna-audio-player * {
+  box-sizing: border-box;
+}
+.luna-audio-player.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+
+.wavesurfer {
+  border-radius: 2px;
+}
+
+.controller {
+  height: 20px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.name,
+.controller-left,
+.controller-right {
+  position: absolute;
+  line-height: 20px;
+}
+.name .icon,
+.controller-left .icon,
+.controller-right .icon {
+  cursor: pointer;
+}
+
+.name {
+  left: 90px;
+  right: 120px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.controller-left {
+  left: -4px;
+}
+
+.play,
+.volume {
+  margin-right: 4px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.volume:hover .volume-controller, .volume.active .volume-controller {
+  width: 50px;
+}
+.volume:hover .volume-bar, .volume.active .volume-bar {
+  width: 45px;
+}
+
+.volume-controller {
+  touch-action: none;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: top;
+  transition: width 0.3s;
+}
+
+.volume-bar {
+  height: 3px;
+  position: relative;
+  top: 8px;
+  border-radius: 1.5px;
+  overflow: hidden;
+  background: #aaa;
+  transition: width 0.3s;
+}
+
+.volume-bar-fill {
+  background: #1a73e8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+}
+
+.controller-right {
+  right: 0;
+}
+
+.theme-light {
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+.theme-light .wavesurfer {
+  background-color: rgba(0, 0, 0, 0.06);
+  background-color: var(--luna-color-fill-secondary, rgba(0, 0, 0, 0.06));
+}
+
+.theme-dark {
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}
+.theme-dark .wavesurfer {
+  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--luna-color-fill-secondary, rgba(255, 255, 255, 0.12));
+}

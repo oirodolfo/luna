@@ -1,6 +1,6 @@
-import toArr from 'licia/toArr'
-import each from 'licia/each'
-import contain from 'licia/contain'
+import toArr from './native/compat/toArr'
+import each from './native/compat/each'
+import contain from './native/compat/contain'
 
 /* eslint-disable no-undef */
 const karma = __karma__

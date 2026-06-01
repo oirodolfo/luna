@@ -12,10 +12,10 @@ import {
 } from 'vue'
 import { IElOptions } from './index'
 import type SplitPane from './index'
-import each from 'licia/each'
-import isNum from 'licia/isNum'
-import isBool from 'licia/isBool'
-import isBrowser from 'licia/isBrowser'
+import each from '../share/native/compat/each'
+import isNum from '../share/native/compat/isNum'
+import isBool from '../share/native/compat/isBool'
+import isBrowser from '../share/native/compat/isBrowser'
 
 const LunaSplitPane = defineComponent({
   name: 'LunaSplitPane',

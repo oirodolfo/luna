@@ -1,8 +1,8 @@
 import { CSSProperties, FC, useEffect, useRef } from 'react'
 import Cropper, { IOptions } from './index'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 import { useNonInitialEffect } from '../share/hooks'
-import clone from 'licia/clone'
+import clone from '../share/native/compat/clone'
 
 interface ICropperProps extends IOptions {
   style?: CSSProperties

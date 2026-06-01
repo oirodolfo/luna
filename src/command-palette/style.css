@@ -1,0 +1,121 @@
+@import "../share/design-system/theme.css";
+
+.luna-command-palette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-command-palette.hidden,
+.luna-command-palette .hidden {
+  display: none !important;
+}
+.luna-command-palette.invisible,
+.luna-command-palette .invisible {
+  visibility: hidden;
+}
+.luna-command-palette * {
+  box-sizing: border-box;
+}
+.luna-command-palette.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: transparent;
+}
+
+.body {
+  max-width: 100%;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  font-size: 12px;
+}
+
+.input {
+  box-sizing: border-box;
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid;
+  padding: 10px 4px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.list li {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+}
+.list li .title {
+  flex: 1;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.theme-light .body {
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+}
+.theme-light .input {
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+}
+.theme-light .list li:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  background-color: var(--luna-color-fill-secondary, rgba(0, 0, 0, 0.06));
+}
+.theme-light .list li.active {
+  color: #fff;
+  color: var(--luna-color-white, #fff);
+  background-color: #1a73e8;
+  background-color: var(--luna-color-primary, #1a73e8);
+}
+
+.theme-dark .body {
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container, #141414);
+}
+.theme-dark .input {
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container, #141414);
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text, rgba(255, 255, 255, 0.85));
+}
+.theme-dark .list li:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--luna-color-fill-secondary, rgba(255, 255, 255, 0.12));
+}
+.theme-dark .list li.active {
+  color: #fff;
+  color: var(--luna-color-white, #fff);
+  background-color: #1965c8;
+  background-color: var(--luna-color-primary, #1965c8);
+}

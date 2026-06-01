@@ -1,8 +1,8 @@
 import { eventPage, exportCjs } from '../share/util'
 import Component, { IComponentOptions } from '../share/Component'
-import pointerEvent from 'licia/pointerEvent'
-import $ from 'licia/$'
-import toEl from 'licia/toEl'
+import pointerEvent from '../share/native/compat/pointerEvent'
+import $ from '../share/native/compat/$'
+import toEl from '../share/native/compat/toEl'
 
 const $document = $(document as any)
 

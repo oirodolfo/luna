@@ -1,0 +1,181 @@
+@import "../share/design-system/theme.css";
+
+.luna-data-grid {
+  position: relative;
+  border: 1px solid;
+  overflow: hidden;
+  outline: none;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-data-grid.hidden,
+.luna-data-grid .hidden {
+  display: none !important;
+}
+.luna-data-grid.invisible,
+.luna-data-grid .invisible {
+  visibility: hidden;
+}
+.luna-data-grid * {
+  box-sizing: border-box;
+}
+.luna-data-grid.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+.luna-data-grid {
+  font-size: 12px;
+}
+.luna-data-grid table {
+  width: 100%;
+  min-height: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+.luna-data-grid th,
+.luna-data-grid td {
+  padding: 1px 4px;
+  border-left: 1px solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.luna-data-grid th {
+  font-weight: normal;
+  border-bottom: 1px solid;
+  text-align: left;
+  position: relative;
+}
+.luna-data-grid th.sortable {
+  padding-right: 12px;
+}
+.luna-data-grid th .icon-caret-down,
+.luna-data-grid th .icon-caret-up {
+  font-size: 12px;
+  position: absolute;
+  display: none;
+  top: 6px;
+  right: 2px;
+}
+.luna-data-grid td {
+  height: 20px;
+  cursor: default;
+  user-select: text;
+}
+.luna-data-grid:focus .node.selectable.selected {
+  color: #fff;
+}
+
+.header-container,
+.data-container {
+  overflow: hidden;
+}
+
+.header-container {
+  height: 21px;
+}
+
+.data-container {
+  overflow-y: auto;
+  position: relative;
+}
+
+.data-space {
+  min-height: 100%;
+}
+
+.data {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.filler-row td {
+  height: auto;
+}
+
+.resizer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  z-index: 500;
+  touch-action: none;
+  cursor: col-resize;
+}
+
+.resizing {
+  cursor: col-resize !important;
+}
+.resizing .luna-data-grid * {
+  cursor: col-resize !important;
+}
+
+.theme-light {
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+.theme-light th,
+.theme-light td {
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+.theme-light th {
+  background-color: rgba(0, 0, 0, 0.06);
+  background-color: var(--luna-color-fill-secondary, rgba(0, 0, 0, 0.06));
+}
+.theme-light th.sortable:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  background-color: var(--luna-color-fill, rgba(0, 0, 0, 0.15));
+}
+.theme-light .data-container .node.selected,
+.theme-light .data-container .node.selectable:hover {
+  background-color: #ddd;
+}
+.theme-light .data-container tr:nth-child(even) {
+  background-color: #f2f7fd;
+}
+.theme-light:focus .node.selectable.selected {
+  background-color: #1a73e8;
+  background-color: var(--luna-color-primary, #1a73e8);
+}
+
+.theme-dark {
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}
+.theme-dark th,
+.theme-dark td {
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}
+.theme-dark th {
+  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--luna-color-fill-secondary, rgba(255, 255, 255, 0.12));
+}
+.theme-dark th.sortable:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  background-color: var(--luna-color-fill, rgba(255, 255, 255, 0.18));
+}
+.theme-dark .data-container .node.selected,
+.theme-dark .data-container .node.selectable:hover {
+  background-color: #393939;
+}
+.theme-dark .data-container tr:nth-child(even) {
+  background-color: #0b2544;
+}
+.theme-dark:focus .node.selectable.selected {
+  background-color: #1965c8;
+  background-color: var(--luna-color-primary, #1965c8);
+}

@@ -1,6 +1,6 @@
 import Component, { IComponentOptions } from '../share/Component'
-import stripIndent from 'licia/stripIndent'
-import $ from 'licia/$'
+import stripIndent from '../share/native/compat/stripIndent'
+import $ from '../share/native/compat/$'
 import LunaMarkdownViewer from 'luna-markdown-viewer'
 
 /** IOptions */

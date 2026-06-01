@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import endWith from 'licia/endWith';
+import endWith from '../share/native/compat/endWith';
 import {luminance} from './ColorUtils';
 
 import type {AreaBounds, Bounds, Position} from './common';

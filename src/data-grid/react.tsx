@@ -1,6 +1,6 @@
 import { FC, useEffect, useRef } from 'react'
 import DataGrid, { DataGridNode, IOptions } from './index'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 import {
   useEvent,
   useNonInitialEffect,

@@ -1,0 +1,246 @@
+@import "../share/design-system/theme.css";
+
+.luna-cropper {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC");
+  position: relative;
+  min-height: 150px;
+  touch-action: none;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-cropper.hidden,
+.luna-cropper .hidden {
+  display: none !important;
+}
+.luna-cropper.invisible,
+.luna-cropper .invisible {
+  visibility: hidden;
+}
+.luna-cropper * {
+  box-sizing: border-box;
+}
+.luna-cropper.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+
+.preview {
+  overflow: hidden;
+}
+
+.cursor-all * {
+  cursor: move !important;
+}
+
+.cursor-crop * {
+  cursor: crosshair !important;
+}
+
+.cursor-e *,
+.cursor-w * {
+  cursor: ew-resize !important;
+}
+
+.cursor-n *,
+.cursor-s * {
+  cursor: ns-resize !important;
+}
+
+.cursor-nw *,
+.cursor-se * {
+  cursor: nwse-resize !important;
+}
+
+.cursor-ne *,
+.cursor-sw * {
+  cursor: nesw-resize !important;
+}
+
+.wrap-box,
+.drag-box,
+.crop-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.wrap-box {
+  overflow: hidden;
+}
+.wrap-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.drag-box {
+  cursor: crosshair;
+  background: #000;
+  opacity: 0.5;
+}
+
+.view-box {
+  display: block;
+  height: 100%;
+  outline: 1px solid #1a73e8;
+  overflow: hidden;
+  width: 100%;
+}
+
+.face,
+.line,
+.point {
+  display: block;
+  height: 100%;
+  opacity: 0.1;
+  position: absolute;
+  width: 100%;
+}
+
+.center {
+  display: block;
+  height: 0;
+  left: 50%;
+  opacity: 0.75;
+  position: absolute;
+  top: 50%;
+  width: 0;
+}
+.center::before, .center::after {
+  background-color: #fff;
+  content: " ";
+  display: block;
+  position: absolute;
+}
+.center::before {
+  height: 1px;
+  left: -3px;
+  top: 0;
+  width: 7px;
+}
+.center::after {
+  height: 7px;
+  left: 0;
+  top: -3px;
+  width: 1px;
+}
+
+.dashed {
+  border: 0 dashed #fff;
+  display: block;
+  position: absolute;
+}
+.dashed.dashed-h {
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  height: 33.3333333333%;
+  left: 0;
+  top: 33.3333333333%;
+  width: 100%;
+}
+.dashed.dashed-v {
+  border-left-width: 1px;
+  border-right-width: 1px;
+  height: 100%;
+  left: 33.3333333333%;
+  top: 0;
+  width: 33.3333333333%;
+}
+
+.face {
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  cursor: move;
+}
+
+.line {
+  background: #1a73e8;
+}
+.line.line-e {
+  cursor: ew-resize;
+  right: -3px;
+  top: 0;
+  width: 5px;
+}
+.line.line-n {
+  cursor: ns-resize;
+  height: 5px;
+  left: 0;
+  top: -3px;
+}
+.line.line-w {
+  cursor: ew-resize;
+  left: -3px;
+  top: 0;
+  width: 5px;
+}
+.line.line-s {
+  bottom: -3px;
+  cursor: ns-resize;
+  height: 5px;
+  left: 0;
+}
+
+.point {
+  background-color: #1a73e8;
+  border: 2px solid #fff;
+  height: 6px;
+  opacity: 1;
+  width: 6px;
+}
+.point.point-e {
+  cursor: ew-resize;
+  margin-top: -5px;
+  right: -5px;
+  top: 50%;
+}
+.point.point-n {
+  cursor: ns-resize;
+  left: 50%;
+  margin-left: -5px;
+  top: -5px;
+}
+.point.point-w {
+  cursor: ew-resize;
+  left: -5px;
+  margin-top: -5px;
+  top: 50%;
+}
+.point.point-s {
+  bottom: -5px;
+  cursor: s-resize;
+  left: 50%;
+  margin-left: -5px;
+}
+.point.point-ne {
+  cursor: nesw-resize;
+  right: -5px;
+  top: -5px;
+}
+.point.point-nw {
+  cursor: nwse-resize;
+  left: -5px;
+  top: -5px;
+}
+.point.point-sw {
+  bottom: -5px;
+  cursor: nesw-resize;
+  left: -5px;
+}
+.point.point-se {
+  bottom: -5px;
+  cursor: nwse-resize;
+  right: -5px;
+}

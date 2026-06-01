@@ -1,10 +1,10 @@
 import 'luna-image-list.css'
 import ImageList from 'luna-image-list.js'
-import { number, boolean, button } from '@storybook/addon-knobs'
+import { number, boolean, button } from '../share/storybook/knobs'
 import story from '../share/story'
 import readme from './README.md'
-import map from 'licia/map'
-import range from 'licia/range'
+import map from '../share/native/compat/map'
+import range from '../share/native/compat/range'
 import LunaImageList from './vue'
 import { h } from 'vue'
 

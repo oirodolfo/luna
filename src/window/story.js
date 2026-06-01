@@ -1,9 +1,9 @@
 import 'luna-window.css'
 import Window from 'luna-window.js'
 import story from '../share/story'
-import escape from 'licia/escape'
+import escape from '../share/native/compat/escape'
 import readme from './README.md'
-import { text } from '@storybook/addon-knobs'
+import { text } from '../share/storybook/knobs'
 
 const def = story(
   'window',

@@ -1,10 +1,10 @@
 import { exportCjs } from '../share/util'
 import Component, { IComponentOptions } from '../share/Component'
-import $ from 'licia/$'
-import isNumeric from 'licia/isNumeric'
-import keyCode from 'licia/keyCode'
-import each from 'licia/each'
-import reverse from 'licia/reverse'
+import $ from '../share/native/compat/$'
+import isNumeric from '../share/native/compat/isNumeric'
+import keyCode from '../share/native/compat/keyCode'
+import each from '../share/native/compat/each'
+import reverse from '../share/native/compat/reverse'
 
 /** IOptions */
 export interface IOptions extends IComponentOptions {

@@ -3,8 +3,8 @@ import ImageViewer from 'luna-image-viewer.js'
 import readme from './README.md'
 import changelog from './CHANGELOG.md'
 import story from '../share/story'
-import $ from 'licia/$'
-import { text, number, button, boolean } from '@storybook/addon-knobs'
+import $ from '../share/native/compat/$'
+import { text, number, button, boolean } from '../share/storybook/knobs'
 import LunaImageViewer from './react'
 
 const def = story(

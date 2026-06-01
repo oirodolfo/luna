@@ -3,7 +3,7 @@ import CommandPalette from 'luna-command-palette'
 import LunaCommandPalette from './react'
 import story from '../share/story'
 import readme from './README.md'
-import { text, button } from '@storybook/addon-knobs'
+import { text, button } from '../share/storybook/knobs'
 import { useState } from 'react'
 
 const def = story(

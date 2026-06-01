@@ -1,4 +1,4 @@
-import extend from 'licia/extend'
+import extend from '../share/native/compat/extend'
 
 export default class Visitor {
   id: number

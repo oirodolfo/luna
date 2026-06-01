@@ -10,11 +10,11 @@ import {
 import { classPrefix } from '../share/util'
 import { IComponentOptions } from '../share/Component'
 import { Component } from '../share/react'
-import className from 'licia/className'
-import types from 'licia/types'
-import map from 'licia/map'
-import uniqId from 'licia/uniqId'
-import toStr from 'licia/toStr'
+import className from '../share/native/compat/className'
+import types from '../share/native/compat/types'
+import map from '../share/native/compat/map'
+import uniqId from '../share/native/compat/uniqId'
+import toStr from '../share/native/compat/toStr'
 import { IButtonState } from 'luna-toolbar'
 
 const c = classPrefix('toolbar')

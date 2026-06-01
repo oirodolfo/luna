@@ -1,6 +1,6 @@
 const path = require('path')
-const each = require('licia/each')
-const contain = require('licia/contain')
+const each = require('./native/compat/each')
+const contain = require('./native/compat/contain')
 const { getFullDependencies, readComponentConfig } = require('../../lib/util')
 
 const headless = contain(process.argv, '--headless')

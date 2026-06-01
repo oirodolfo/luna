@@ -1,0 +1,150 @@
+@import "../share/design-system/theme.css";
+
+.luna-tab {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-tab.hidden,
+.luna-tab .hidden {
+  display: none !important;
+}
+.luna-tab.invisible,
+.luna-tab .invisible {
+  visibility: hidden;
+}
+.luna-tab * {
+  box-sizing: border-box;
+}
+.luna-tab.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+
+.tabs-container {
+  border-bottom: 1px solid;
+}
+
+.tabs {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  white-space: nowrap;
+}
+.tabs::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.item {
+  display: inline-flex;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 12px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.item:hover .close-container, .item.selected .close-container {
+  opacity: 1;
+}
+
+.close-container {
+  display: flex;
+  height: 100%;
+  width: 12px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.close {
+  position: relative;
+  left: 4px;
+  border-radius: 2px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  line-height: 14px;
+}
+
+.icon-close {
+  font-size: 14px;
+}
+
+.slider {
+  transition: left 0.3s, width 0.3s;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.theme-light .tabs-container {
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+.theme-light .item.luna-tab-selected {
+  color: #1a73e8;
+  color: var(--luna-color-primary, #1a73e8);
+}
+.theme-light .item:hover {
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: rgba(0, 0, 0, 0.06);
+  background-color: var(--luna-color-fill-secondary, rgba(0, 0, 0, 0.06));
+}
+.theme-light .close {
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+}
+.theme-light .close:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  background-color: var(--luna-color-fill-secondary, rgba(0, 0, 0, 0.06));
+}
+.theme-light .slider {
+  background-color: #1a73e8;
+  background-color: var(--luna-color-primary, #1a73e8);
+}
+
+.theme-dark .tabs-container {
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}
+.theme-dark .item.luna-tab-selected {
+  color: #1965c8;
+  color: var(--luna-color-primary, #1965c8);
+}
+.theme-dark .item:hover {
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text, rgba(255, 255, 255, 0.85));
+  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--luna-color-fill-secondary, rgba(255, 255, 255, 0.12));
+}
+.theme-dark .close {
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text, rgba(255, 255, 255, 0.85));
+}
+.theme-dark .close:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--luna-color-fill-secondary, rgba(255, 255, 255, 0.12));
+}
+.theme-dark .slider {
+  background-color: #1965c8;
+  background-color: var(--luna-color-primary, #1965c8);
+}

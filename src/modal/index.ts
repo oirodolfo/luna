@@ -1,11 +1,11 @@
 import Component, { IComponentOptions } from '../share/Component'
-import stripIndent from 'licia/stripIndent'
-import $ from 'licia/$'
-import h from 'licia/h'
-import types from 'licia/types'
-import map from 'licia/map'
+import stripIndent from '../share/native/compat/stripIndent'
+import $ from '../share/native/compat/$'
+import h from '../share/native/compat/h'
+import types from '../share/native/compat/types'
+import map from '../share/native/compat/map'
 import { exportCjs } from '../share/util'
-import I18n from 'licia/I18n'
+import I18n from '../share/native/compat/I18n'
 
 /** IOptions */
 export interface IOptions extends IComponentOptions {

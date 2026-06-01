@@ -3,7 +3,7 @@ import SyntaxHighlighter from 'luna-syntax-highlighter.js'
 import readme from './README.md'
 import changelog from './CHANGELOG.md'
 import story from '../share/story'
-import { text, boolean, optionsKnob, number } from '@storybook/addon-knobs'
+import { text, boolean, optionsKnob, number } from '../share/storybook/knobs'
 import componentCode from '!!raw-loader!./index'
 
 const def = story(

@@ -1,12 +1,12 @@
-import Emitter from 'licia/Emitter'
-import $ from 'licia/$'
+import Emitter from './native/compat/Emitter'
+import $ from './native/compat/$'
 import { classPrefix, getPlatform } from './util'
-import each from 'licia/each'
-import extend from 'licia/extend'
-import defaults from 'licia/defaults'
-import remove from 'licia/remove'
-import theme from 'licia/theme'
-import startWith from 'licia/startWith'
+import each from './native/compat/each'
+import extend from './native/compat/extend'
+import defaults from './native/compat/defaults'
+import remove from './native/compat/remove'
+import theme from './native/compat/theme'
+import startWith from './native/compat/startWith'
 
 interface IOptions {
   compName: string

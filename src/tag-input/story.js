@@ -1,5 +1,5 @@
 import 'luna-tag-input.css'
-import h from 'licia/h'
+import h from '../share/native/compat/h'
 import TagInput from 'luna-tag-input.js'
 import story from '../share/story'
 import readme from './README.md'

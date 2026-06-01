@@ -1,0 +1,77 @@
+@import "../share/design-system/theme.css";
+
+.luna-image-viewer {
+  overflow: hidden;
+  touch-action: none;
+  border: 1px solid;
+  position: relative;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-image-viewer.hidden,
+.luna-image-viewer .hidden {
+  display: none !important;
+}
+.luna-image-viewer.invisible,
+.luna-image-viewer .invisible {
+  visibility: hidden;
+}
+.luna-image-viewer * {
+  box-sizing: border-box;
+}
+.luna-image-viewer.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+
+.image {
+  height: auto;
+  margin: 15px auto;
+  width: auto;
+  display: block;
+}
+
+.ratio {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  height: 20px;
+  left: 50%;
+  line-height: 20px;
+  margin-left: -25px;
+  margin-top: -10px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 50px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.ratio.show {
+  opacity: 1;
+}
+
+.image-transition {
+  transition: all 0.3s;
+}
+
+.theme-light {
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+
+.theme-dark {
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}

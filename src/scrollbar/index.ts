@@ -1,10 +1,10 @@
 import Component, { IComponentOptions } from '../share/Component'
-import stripIndent from 'licia/stripIndent'
-import $ from 'licia/$'
-import each from 'licia/each'
-import clone from 'licia/clone'
-import ResizeSensor from 'licia/ResizeSensor'
-import pointerEvent from 'licia/pointerEvent'
+import stripIndent from '../share/native/compat/stripIndent'
+import $ from '../share/native/compat/$'
+import each from '../share/native/compat/each'
+import clone from '../share/native/compat/clone'
+import ResizeSensor from '../share/native/compat/ResizeSensor'
+import pointerEvent from '../share/native/compat/pointerEvent'
 import { measuredScrollbarWidth, exportCjs } from '../share/util'
 
 const $document = $(document as any)

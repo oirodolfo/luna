@@ -1,11 +1,11 @@
 import Painter, { Layer } from '../'
 import Tool from './Tool'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 import Zoom from './Zoom'
-import defaults from 'licia/defaults'
-import nextTick from 'licia/nextTick'
+import defaults from '../share/native/compat/defaults'
+import nextTick from '../share/native/compat/nextTick'
 import { duplicateCanvas } from '../util'
-import hotkey from 'licia/hotkey'
+import hotkey from '../share/native/compat/hotkey'
 
 export default class Pencil extends Tool {
   private drawCtx: CanvasRenderingContext2D

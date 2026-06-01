@@ -3,8 +3,8 @@ import DomHighlighter from 'luna-dom-highlighter.js'
 import story from '../share/story'
 import readme from './README.md'
 import changelog from './CHANGELOG.md'
-import $ from 'licia/$'
-import h from 'licia/h'
+import $ from '../share/native/compat/$'
+import h from '../share/native/compat/h'
 import {
   button,
   boolean,
@@ -12,7 +12,7 @@ import {
   text,
   select,
   color,
-} from '@storybook/addon-knobs'
+} from '../share/storybook/knobs'
 import { red5, purple5 } from '../share/theme'
 
 const def = story(

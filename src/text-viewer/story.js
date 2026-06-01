@@ -2,7 +2,7 @@ import 'luna-text-viewer.css'
 import TextViewer from 'luna-text-viewer.js'
 import readme from './README.md'
 import story from '../share/story'
-import { text, boolean, number, button } from '@storybook/addon-knobs'
+import { text, boolean, number, button } from '../share/storybook/knobs'
 import LunaTextViewer from './react'
 
 const def = story(

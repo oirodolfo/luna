@@ -2,8 +2,8 @@ import 'luna-split-pane.css'
 import SplitPane from 'luna-split-pane.js'
 import story from '../share/story'
 import readme from './README.md'
-import $ from 'licia/$'
-import toEl from 'licia/toEl'
+import $ from '../share/native/compat/$'
+import toEl from '../share/native/compat/toEl'
 import {
   colorBorder,
   colorBorderDark,
@@ -11,7 +11,7 @@ import {
   blue5,
   green5,
 } from '../share/theme'
-import { number, optionsKnob } from '@storybook/addon-knobs'
+import { number, optionsKnob } from '../share/storybook/knobs'
 import ReactSplitPane, {
   LunaSplitPaneItem as ReactSplitPaneItem,
 } from './react'

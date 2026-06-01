@@ -1,4 +1,4 @@
-import escape from 'licia/escape'
+import escape from '../share/native/compat/escape'
 import Console from './index'
 import test from '../share/test'
 

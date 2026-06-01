@@ -3,7 +3,7 @@ import MarkdownViewer from 'luna-markdown-viewer.js'
 import story from '../share/story'
 import readme from './README.md'
 import demo from './DEMO.md'
-import { text } from '@storybook/addon-knobs'
+import { text } from '../share/storybook/knobs'
 
 const def = story(
   'markdown-viewer',

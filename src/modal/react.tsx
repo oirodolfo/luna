@@ -1,9 +1,9 @@
 import { FC, PropsWithChildren, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import types from 'licia/types'
+import types from '../share/native/compat/types'
 import Modal from './index'
-import noop from 'licia/noop'
-import each from 'licia/each'
+import noop from '../share/native/compat/noop'
+import each from '../share/native/compat/each'
 import { useForceUpdate, useNonInitialEffect } from '../share/hooks'
 
 interface IModalProps {

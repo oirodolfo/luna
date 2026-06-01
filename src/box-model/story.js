@@ -1,11 +1,11 @@
 import 'luna-box-model.css'
-import $ from 'licia/$'
-import h from 'licia/h'
+import $ from '../share/native/compat/$'
+import h from '../share/native/compat/h'
 import story from '../share/story'
 import readme from './README.md'
 import changelog from './CHANGELOG.md'
 import BoxModel from 'luna-box-model.js'
-import { text, object } from '@storybook/addon-knobs'
+import { text, object } from '../share/storybook/knobs'
 import { red5, purple5 } from '../share/theme'
 
 const def = story(

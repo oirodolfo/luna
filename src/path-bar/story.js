@@ -3,7 +3,7 @@ import PathBar from 'luna-path-bar.js'
 import readme from './README.md'
 import story from '../share/story'
 import LunaPathBar from './react'
-import { text } from '@storybook/addon-knobs'
+import { text } from '../share/storybook/knobs'
 
 const def = story(
   'path-bar',

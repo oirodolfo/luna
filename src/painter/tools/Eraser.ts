@@ -2,9 +2,9 @@ import Tool from './Tool'
 import Brush from './Brush'
 import Pencil from './Pencil'
 import Painter, { Layer } from '../'
-import nextTick from 'licia/nextTick'
+import nextTick from '../share/native/compat/nextTick'
 import { CursorCircle } from './Pencil'
-import hotkey from 'licia/hotkey'
+import hotkey from '../share/native/compat/hotkey'
 
 export default class Eraser extends Tool {
   private cursorCircle: CursorCircle

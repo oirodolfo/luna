@@ -2,12 +2,12 @@ import 'luna-shader-toy-player.css'
 import ShaderToyPlayer from 'luna-shader-toy-player.js'
 import readme from './README.md'
 import story from '../share/story'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 import shaders, { cube } from './shaders'
 import LunaShaderToyPlayer from './vue'
 import LunaShaderToyPlayerReact from './react'
 import { h } from 'vue'
-import { text, optionsKnob, button, boolean } from '@storybook/addon-knobs'
+import { text, optionsKnob, button, boolean } from '../share/storybook/knobs'
 
 const def = story(
   'shader-toy-player',

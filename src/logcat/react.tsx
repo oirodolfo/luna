@@ -1,5 +1,5 @@
 import { CSSProperties, FC, useEffect, useRef } from 'react'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 import Logcat, { IOptions, IEntry } from './index'
 import { useEvent, useOption, usePrevious } from '../share/hooks'
 

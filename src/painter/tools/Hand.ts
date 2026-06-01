@@ -1,7 +1,7 @@
 import Tool from './Tool'
 import Zoom from './Zoom'
 import Painter from '../'
-import keyCode from 'licia/keyCode'
+import keyCode from '../share/native/compat/keyCode'
 import { eventClient } from '../../share/util'
 
 export default class Hand extends Tool {

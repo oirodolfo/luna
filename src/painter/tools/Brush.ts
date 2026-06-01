@@ -1,10 +1,10 @@
 import Painter, { Layer } from '../'
-import defaults from 'licia/defaults'
+import defaults from '../share/native/compat/defaults'
 import Tool from './Tool'
-import nextTick from 'licia/nextTick'
+import nextTick from '../share/native/compat/nextTick'
 import { CursorCircle } from './Pencil'
 import { duplicateCanvas } from '../util'
-import hotkey from 'licia/hotkey'
+import hotkey from '../share/native/compat/hotkey'
 
 export default class Brush extends Tool {
   private drawCtx: CanvasRenderingContext2D
