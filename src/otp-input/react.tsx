@@ -1,7 +1,7 @@
 import { CSSProperties, FC, useEffect, useRef } from 'react'
 import OtpInput, { IOptions } from './index'
 import { useEvent, useOption, usePrevious } from '../share/hooks'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 
 interface IOtpInputProps extends IOptions {
   style?: CSSProperties

@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
 const program = require('commander')
-const fs = require('licia/fs')
-const dataUrl = require('licia/dataUrl')
-const mime = require('licia/mime')
-const convertBin = require('licia/convertBin')
 const path = require('path')
+const { fs, dataUrl, mime, convertBin } = require('../lib/native')
 const {
   runScript,
   wrap,

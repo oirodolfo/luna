@@ -1,11 +1,11 @@
 import Component from '../share/Component'
 import LunaMenu from 'luna-menu'
-import h from 'licia/h'
-import each from 'licia/each'
-import idxOf from 'licia/idxOf'
-import toStr from 'licia/toStr'
-import $ from 'licia/$'
-import toNum from 'licia/toNum'
+import h from '../share/native/compat/h'
+import each from '../share/native/compat/each'
+import idxOf from '../share/native/compat/idxOf'
+import toStr from '../share/native/compat/toStr'
+import $ from '../share/native/compat/$'
+import toNum from '../share/native/compat/toNum'
 
 /** IMenuItemOptions */
 export interface IMenuItemOptions {

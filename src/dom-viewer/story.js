@@ -1,11 +1,11 @@
 import 'luna-dom-viewer.css'
-import h from 'licia/h'
+import h from '../share/native/compat/h'
 import DomViewer from 'luna-dom-viewer.js'
 import LunaDomViewer from './react'
 import story from '../share/story'
 import readme from './README.md'
 import changelog from './CHANGELOG.md'
-import { boolean } from '@storybook/addon-knobs'
+import { boolean } from '../share/storybook/knobs'
 
 const def = story(
   'dom-viewer',

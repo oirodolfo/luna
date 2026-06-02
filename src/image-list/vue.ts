@@ -6,7 +6,7 @@ import {
   shallowRef,
   watch,
 } from 'vue'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 import ImageList from './index'
 
 const LunaImageList = defineComponent({

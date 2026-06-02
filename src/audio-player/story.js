@@ -3,7 +3,7 @@ import story from '../share/story'
 import readme from './README.md'
 import AudioPlayer from 'luna-audio-player.js'
 import LunaAudioPlayer from './react'
-import { number } from '@storybook/addon-knobs'
+import { number } from '../share/storybook/knobs'
 
 const def = story(
   'audio-player',

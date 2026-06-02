@@ -1,0 +1,218 @@
+@import "../share/design-system/theme.css";
+
+.luna-video-player {
+  min-height: 150px;
+  position: relative;
+  outline: none;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-video-player.hidden,
+.luna-video-player .hidden {
+  display: none !important;
+}
+.luna-video-player.invisible,
+.luna-video-player .invisible {
+  visibility: hidden;
+}
+.luna-video-player * {
+  box-sizing: border-box;
+}
+.luna-video-player.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+.luna-video-player {
+  background: #000;
+  font-size: 14px;
+}
+
+.luna-video-player:hover .controller {
+  opacity: 1;
+}
+.luna-video-player.controller-hidden {
+  cursor: none;
+}
+.luna-video-player.controller-hidden .controller {
+  opacity: 0;
+}
+.luna-video-player.controller-hidden .controller:hover {
+  opacity: 1;
+}
+
+.controller {
+  cursor: default;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  height: 41px;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 0;
+  transition: opacity 0.3s;
+}
+.controller.active {
+  opacity: 1 !important;
+}
+
+.controller-mask {
+  position: absolute;
+  pointer-events: none;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==) repeat-x bottom;
+}
+
+.controller-left,
+.controller-right {
+  height: 38px;
+  position: absolute;
+  bottom: 0;
+}
+.controller-left .icon,
+.controller-right .icon {
+  vertical-align: top;
+  cursor: pointer;
+  color: #eee;
+  height: 100%;
+  line-height: 38px;
+}
+.controller-left .icon:hover,
+.controller-right .icon:hover {
+  color: #fff;
+}
+
+.controller-left {
+  left: 20px;
+}
+
+.controller-right {
+  right: 20px;
+}
+.controller-right .icon {
+  margin-left: 8px;
+}
+
+.video {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.video video {
+  width: 100%;
+  height: 100%;
+}
+
+.controller-top {
+  touch-action: none;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 38px;
+  width: calc(100% - 40px);
+}
+
+.controller-top:hover .bar-thumb {
+  opacity: 1;
+}
+
+.bar-thumb {
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  margin-right: -4px;
+  right: 0;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background: #1a73e8;
+  border-radius: 50%;
+}
+
+.bar {
+  position: relative;
+  height: 3px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.bar-played,
+.bar-loaded {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 3px;
+}
+
+.bar-loaded {
+  background: rgba(255, 255, 255, 0.5);
+  transition: width 0.3s;
+}
+
+.bar-played {
+  background: #1a73e8;
+}
+
+.play,
+.volume {
+  margin-right: 8px;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.volume {
+  height: 100%;
+}
+.volume:hover .volume-controller, .volume.active .volume-controller {
+  width: 50px;
+}
+.volume:hover .volume-bar, .volume.active .volume-bar {
+  width: 45px;
+}
+
+.volume-controller {
+  touch-action: none;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: top;
+  transition: width 0.3s;
+}
+
+.volume-bar {
+  height: 3px;
+  position: relative;
+  top: 18px;
+  border-radius: 1.5px;
+  overflow: hidden;
+  background: #aaa;
+  transition: width 0.3s;
+}
+
+.volume-bar-fill {
+  background: #1a73e8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+}
+
+.time {
+  color: #eee;
+  font-size: 12px;
+  line-height: 38px;
+}

@@ -2,7 +2,7 @@ import 'luna-drag-selector.css'
 import LunaDragSelector from 'luna-drag-selector.js'
 import story from '../share/story'
 import readme from './README.md'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 import { colorBorder, colorBorderDark, red5, blue5 } from '../share/theme'
 
 const def = story(

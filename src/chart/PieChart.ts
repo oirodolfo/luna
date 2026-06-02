@@ -1,6 +1,6 @@
 import BaseChart from './BaseChart'
-import sum from 'licia/sum'
-import toStr from 'licia/toStr'
+import sum from '../share/native/compat/sum'
+import toStr from '../share/native/compat/toStr'
 import { px } from './util'
 
 export default class PieChart extends BaseChart {

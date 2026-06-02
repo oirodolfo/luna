@@ -1,10 +1,10 @@
 import 'luna-file-list.css'
 import FileList from 'luna-file-list.js'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 import readme from './README.md'
 import story from '../share/story'
 import LunaFileList from './react'
-import { boolean, text, object } from '@storybook/addon-knobs'
+import { boolean, text, object } from '../share/storybook/knobs'
 
 const def = story(
   'file-list',

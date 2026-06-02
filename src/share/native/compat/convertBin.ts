@@ -1,0 +1,1 @@
+export default function convertBin(value, to) { if (to === 'base64') { if (typeof Buffer !== 'undefined' && Buffer.isBuffer(value)) return value.toString('base64'); const view = value instanceof Uint8Array ? value : new Uint8Array(value); let binary=''; view.forEach((item) => binary += String.fromCharCode(item)); return btoa(binary) } return value }

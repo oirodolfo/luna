@@ -1,0 +1,109 @@
+@import "../share/design-system/theme.css";
+
+.luna-editor {
+  border: 1px solid #d9d9d9;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-editor.hidden,
+.luna-editor .hidden {
+  display: none !important;
+}
+.luna-editor.invisible,
+.luna-editor .invisible {
+  visibility: hidden;
+}
+.luna-editor * {
+  box-sizing: border-box;
+}
+.luna-editor.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+.luna-editor.fullscreen {
+  position: fixed;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  left: 0;
+  top: 0;
+}
+
+.toolbar {
+  background: #ffffff;
+  padding: 0 6px;
+  font-size: 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background: #ffffff;
+  cursor: pointer;
+  border: none;
+  color: rgba(0, 0, 0, 0.88);
+}
+.button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+.button.active {
+  color: #1a73e8;
+}
+.button:active, .button:focus {
+  outline: none;
+}
+.button .icon {
+  vertical-align: middle;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.body {
+  background: #ffffff;
+  height: 300px;
+}
+
+.content {
+  padding: 6px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.content:focus {
+  outline: none;
+}
+.content blockquote {
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-left: 8px solid #1a73e8;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.theme-dark {
+  border-color: #424242;
+}
+.theme-dark .toolbar {
+  background: #141414;
+  border-color: #424242;
+}
+.theme-dark .button {
+  background: #141414;
+  color: rgba(255, 255, 255, 0.85);
+}
+.theme-dark .body {
+  background: #141414;
+}

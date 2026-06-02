@@ -1,15 +1,15 @@
 import 'luna-virtual-list.css'
 import VirtualList from 'luna-virtual-list'
 import story from '../share/story'
-import h from 'licia/h'
-import toStr from 'licia/toStr'
-import $ from 'licia/$'
-import each from 'licia/each'
-import random from 'licia/random'
-import randomItem from 'licia/randomItem'
+import h from '../share/native/compat/h'
+import toStr from '../share/native/compat/toStr'
+import $ from '../share/native/compat/$'
+import each from '../share/native/compat/each'
+import random from '../share/native/compat/random'
+import randomItem from '../share/native/compat/randomItem'
 import readme from './README.md'
-import randomId from 'licia/randomId'
-import { boolean, button } from '@storybook/addon-knobs'
+import randomId from '../share/native/compat/randomId'
+import { boolean, button } from '../share/storybook/knobs'
 import {
   green5,
   red5,

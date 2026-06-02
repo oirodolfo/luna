@@ -1,8 +1,8 @@
-import map from 'licia/map'
-import isNum from 'licia/isNum'
-import isStr from 'licia/isStr'
-import bind from 'licia/bind'
-import $ from 'licia/$'
+import map from '../share/native/compat/map'
+import isNum from '../share/native/compat/isNum'
+import isStr from '../share/native/compat/isStr'
+import bind from '../share/native/compat/bind'
+import $ from '../share/native/compat/$'
 import { exportCjs, pxToNum } from '../share/util'
 import Component, { IComponentOptions } from '../share/Component'
 

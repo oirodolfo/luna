@@ -1,6 +1,6 @@
 import 'luna-json-editor.css'
 import JsonEditor from 'luna-json-editor.js'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean } from '../share/storybook/knobs'
 import readme from './README.md'
 import story from '../share/story'
 

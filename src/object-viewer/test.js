@@ -1,6 +1,6 @@
 import ObjectViewer, { Static } from './index'
-import defineProp from 'licia/defineProp'
-import stringifyAll from 'licia/stringifyAll'
+import defineProp from '../share/native/compat/defineProp'
+import stringifyAll from '../share/native/compat/stringifyAll'
 import test from '../share/test'
 
 test('object-viewer', (container) => {

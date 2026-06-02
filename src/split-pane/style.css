@@ -1,0 +1,93 @@
+@import "../share/design-system/theme.css";
+
+.luna-split-pane {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-split-pane.hidden,
+.luna-split-pane .hidden {
+  display: none !important;
+}
+.luna-split-pane.invisible,
+.luna-split-pane .invisible {
+  visibility: hidden;
+}
+.luna-split-pane * {
+  box-sizing: border-box;
+}
+.luna-split-pane.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: transparent;
+}
+.luna-split-pane.horizontal {
+  flex-direction: row;
+}
+.luna-split-pane.horizontal > .resizer {
+  width: 4px;
+  top: 0;
+  bottom: 0;
+  cursor: col-resize;
+}
+.luna-split-pane.vertical {
+  flex-direction: column;
+}
+.luna-split-pane.vertical > .resizer {
+  height: 4px;
+  left: 0;
+  right: 0;
+  cursor: row-resize;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.resizer {
+  position: absolute;
+  z-index: 500;
+  touch-action: none;
+  transition: background-color 0.2s;
+}
+
+.resizing-horizontal {
+  cursor: col-resize !important;
+}
+.resizing-horizontal .luna-split-pane * {
+  cursor: col-resize !important;
+}
+
+.resizing-vertical {
+  cursor: row-resize !important;
+}
+.resizing-vertical .luna-split-pane * {
+  cursor: row-resize !important;
+}
+
+.theme-light .resizer.active,
+.theme-light .resizer:hover {
+  background-color: #1a73e8;
+  background-color: var(--luna-color-primary, #1a73e8);
+}
+
+.theme-dark .resizer.active,
+.theme-dark .resizer:hover {
+  background-color: #1965c8;
+  background-color: var(--luna-color-primary, #1965c8);
+}

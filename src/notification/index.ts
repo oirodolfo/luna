@@ -1,10 +1,10 @@
-import $ from 'licia/$'
-import uniqId from 'licia/uniqId'
-import find from 'licia/find'
-import h from 'licia/h'
+import $ from '../share/native/compat/$'
+import uniqId from '../share/native/compat/uniqId'
+import find from '../share/native/compat/find'
+import h from '../share/native/compat/h'
 import Component, { IComponentOptions } from '../share/Component'
 import { exportCjs } from '../share/util'
-import isUndef from 'licia/isUndef'
+import isUndef from '../share/native/compat/isUndef'
 
 /** IPosition */
 export interface IPosition {

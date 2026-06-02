@@ -1,6 +1,6 @@
-import map from 'licia/map'
-import max from 'licia/max'
-import toStr from 'licia/toStr'
+import map from '../share/native/compat/map'
+import max from '../share/native/compat/max'
+import toStr from '../share/native/compat/toStr'
 import BaseChart from './BaseChart'
 import { px } from './util'
 

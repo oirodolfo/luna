@@ -1,0 +1,24 @@
+@import "../share/design-system/theme.css";
+
+.luna-drag-selector {
+  position: relative;
+  user-select: none;
+}
+
+.select-area {
+  position: absolute;
+  border: 1px solid;
+  z-index: 1000;
+}
+
+.theme-light .select-area {
+  border-color: #1a73e8;
+  border-color: var(--luna-color-primary, #1a73e8);
+  background-color: rgba(26, 115, 232, 0.2);
+}
+
+.theme-dark .select-area {
+  border-color: #1965c8;
+  border-color: var(--luna-color-primary, #1965c8);
+  background-color: rgba(25, 101, 200, 0.2);
+}

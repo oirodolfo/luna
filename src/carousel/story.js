@@ -1,9 +1,9 @@
 import 'luna-carousel.css'
 import Carousel from 'luna-carousel.js'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 import story from '../share/story'
 import readme from './README.md'
-import { number, button } from '@storybook/addon-knobs'
+import { number, button } from '../share/storybook/knobs'
 
 const def = story(
   'carousel',

@@ -1,8 +1,8 @@
 import Component from '../share/Component'
-import $ from 'licia/$'
-import h from 'licia/h'
-import defaults from 'licia/defaults'
-import each from 'licia/each'
+import $ from '../share/native/compat/$'
+import h from '../share/native/compat/h'
+import defaults from '../share/native/compat/defaults'
+import each from '../share/native/compat/each'
 import {
   measuredScrollbarWidth,
   hasVerticalScrollbar,

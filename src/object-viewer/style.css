@@ -1,0 +1,129 @@
+@import "../share/design-system/theme.css";
+
+.luna-object-viewer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+  cursor: default;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+  line-height: 1.2;
+  min-height: 100%;
+  color: #333;
+  list-style: none !important;
+}
+.luna-object-viewer ul {
+  list-style: none !important;
+  padding: 0 !important;
+  padding-left: 12px !important;
+  margin: 0 !important;
+}
+.luna-object-viewer li {
+  position: relative;
+  white-space: nowrap;
+  line-height: 16px;
+  min-height: 16px;
+}
+.luna-object-viewer > li > .key {
+  display: none;
+}
+.luna-object-viewer span {
+  position: static !important;
+}
+.luna-object-viewer li .collapsed ~ .close:before {
+  color: #999;
+}
+
+.array .object .key {
+  display: inline;
+}
+
+.null {
+  color: #5e5e5e;
+}
+
+.string,
+.regexp {
+  color: #c41a16;
+}
+
+.number {
+  color: #1c00cf;
+}
+
+.boolean {
+  color: #0d22aa;
+}
+
+.special {
+  color: #5e5e5e;
+}
+
+.key,
+.key-lighter {
+  color: #881391;
+}
+
+.key-lighter {
+  opacity: 0.6;
+}
+
+.key-special {
+  color: #5e5e5e;
+}
+
+.expanded .icon,
+.collapsed .icon {
+  position: absolute !important;
+  left: -12px;
+  color: #727272;
+  font-size: 12px;
+}
+
+.icon-caret-right {
+  top: 0;
+}
+
+.icon-caret-down {
+  top: 1px;
+}
+
+.expanded > .icon-caret-down {
+  display: inline;
+}
+
+.expanded > .icon-caret-right {
+  display: none;
+}
+
+.collapsed > .icon-caret-down {
+  display: none;
+}
+
+.collapsed > .icon-caret-right {
+  display: inline;
+}
+
+.hidden ~ ul {
+  display: none;
+}
+
+.theme-dark {
+  color: #fff;
+}
+.theme-dark .null,
+.theme-dark .special {
+  color: #a1a1a1;
+}
+.theme-dark .string,
+.theme-dark .regexp {
+  color: #f28b54;
+}
+.theme-dark .number,
+.theme-dark .boolean {
+  color: #9980ff;
+}
+.theme-dark .key,
+.theme-dark .key-lighter {
+  color: #5db0d7;
+}

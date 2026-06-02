@@ -1,21 +1,17 @@
-import { withKnobs } from '@storybook/addon-knobs'
-import camelCase from 'licia/camelCase'
-import spaceCase from 'licia/spaceCase'
-import map from 'licia/map'
-import h from 'licia/h'
-import waitUntil from 'licia/waitUntil'
-import isArr from 'licia/isArr'
-import isDarkMode from 'licia/isDarkMode'
-import contain from 'licia/contain'
-import upperFirst from 'licia/upperFirst'
-import extend from 'licia/extend'
-import { addReadme } from 'storybook-readme/html'
-import each from 'licia/each'
-import addons from '@storybook/addons'
-import now from 'licia/now'
+import { withKnobs, optionsKnob } from './storybook/knobs'
+import camelCase from './native/compat/camelCase'
+import spaceCase from './native/compat/spaceCase'
+import map from './native/compat/map'
+import h from './native/compat/h'
+import waitUntil from './native/compat/waitUntil'
+import isArr from './native/compat/isArr'
+import isDarkMode from './native/compat/isDarkMode'
+import contain from './native/compat/contain'
+import upperFirst from './native/compat/upperFirst'
+import extend from './native/compat/extend'
+import { addReadme } from './storybook/readme'
+import each from './native/compat/each'
 import ReactDOM from 'react-dom'
-import * as registerKnobs from '@storybook/addon-knobs/dist/registerKnobs'
-import { optionsKnob } from '@storybook/addon-knobs'
 import { createApp, defineComponent } from 'vue'
 
 export default function story(
@@ -179,13 +175,7 @@ function fixKnobs(name) {
   if (window.components) {
     const lastComponentName = window.componentName
     if (upperFirst(camelCase(name)) !== lastComponentName) {
-      // Fix knobs not reset when story changed.
-      const knobStore = registerKnobs.manager.knobStore
-      knobStore.reset()
-      addons.getChannel().emit('storybookjs/knobs/set', {
-        knobs: knobStore.getAll(),
-        timestamp: now(),
-      })
+      globalThis.__LUNA_STORY_ARGS__ = {}
     }
     each(window.components, (component) => component.destroy())
     if (window.reactComponent) {

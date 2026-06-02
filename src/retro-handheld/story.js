@@ -1,9 +1,9 @@
 import 'luna-retro-handheld.css'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 import story from '../share/story'
 import RetroHandheld from 'luna-retro-handheld.js'
 import readme from './README.md'
-import { optionsKnob, button, text } from '@storybook/addon-knobs'
+import { optionsKnob, button, text } from '../share/storybook/knobs'
 
 const def = story(
   'retro-handheld',

@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from 'react'
 import CommandPalette, { IOptions } from './index'
-import each from 'licia/each'
-import types from 'licia/types'
+import each from '../share/native/compat/each'
+import types from '../share/native/compat/types'
 import { useNonInitialEffect, useOption } from '../share/hooks'
 
 interface ICommandPaletteProps extends IOptions {

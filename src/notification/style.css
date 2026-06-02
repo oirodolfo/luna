@@ -1,0 +1,145 @@
+@import "../share/design-system/theme.css";
+
+.luna-notification {
+  position: relative;
+  padding: 20px;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-notification.hidden,
+.luna-notification .hidden {
+  display: none !important;
+}
+.luna-notification.invisible,
+.luna-notification .invisible {
+  visibility: hidden;
+}
+.luna-notification * {
+  box-sizing: border-box;
+}
+.luna-notification.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: transparent;
+}
+.luna-notification.full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  display: flex;
+  border: 1px solid;
+  padding: 10px 16px;
+  align-items: center;
+}
+
+.lower {
+  margin-top: 16px;
+}
+
+.upper {
+  margin-bottom: 16px;
+}
+
+.icon-container {
+  margin-right: 8px;
+  color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+}
+.icon-container.info .icon {
+  position: relative;
+  top: -2px;
+  font-size: 12px;
+}
+.icon-container.success .icon {
+  position: relative;
+  top: -1px;
+  font-size: 12px;
+}
+.icon-container.warning {
+  position: relative;
+  top: -2px;
+}
+.icon-container.warning .icon {
+  font-size: 14px;
+}
+.icon-container.error {
+  position: relative;
+  top: -1px;
+}
+.icon-container.error .icon {
+  font-size: 14px;
+}
+
+.theme-light .item {
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--luna-box-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05));
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+}
+.theme-light .icon-container.info {
+  background-color: #1677ff;
+  background-color: var(--luna-color-info, #1677ff);
+}
+.theme-light .icon-container.success {
+  background-color: #52c41a;
+  background-color: var(--luna-color-success, #52c41a);
+}
+.theme-light .icon-container.warning {
+  color: #faad14;
+  color: var(--luna-color-warning, #faad14);
+}
+.theme-light .icon-container.error {
+  color: #ff4d4f;
+  color: var(--luna-color-error, #ff4d4f);
+}
+
+.theme-dark .item {
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--luna-box-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05));
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container, #141414);
+}
+.theme-dark .icon-container.info {
+  background-color: #1668dc;
+  background-color: var(--luna-color-info, #1668dc);
+}
+.theme-dark .icon-container.success {
+  background-color: #49aa19;
+  background-color: var(--luna-color-success, #49aa19);
+}
+.theme-dark .icon-container.warning {
+  color: #d89614;
+  color: var(--luna-color-warning, #d89614);
+}
+.theme-dark .icon-container.error {
+  color: #dc4446;
+  color: var(--luna-color-error, #dc4446);
+}

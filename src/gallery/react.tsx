@@ -1,8 +1,8 @@
 import { FC, useEffect, useRef } from 'react'
 import Gallery, { IOptions } from './index'
-import each from 'licia/each'
-import isUndef from 'licia/isUndef'
-import types from 'licia/types'
+import each from '../share/native/compat/each'
+import isUndef from '../share/native/compat/isUndef'
+import types from '../share/native/compat/types'
 
 interface IGalleryProps extends IOptions {
   images: Array<{ src: string; title?: string }>

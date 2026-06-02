@@ -1,12 +1,12 @@
 import Component, { IComponentOptions } from '../share/Component'
-import $ from 'licia/$'
-import throttle from 'licia/throttle'
-import isHidden from 'licia/isHidden'
-import now from 'licia/now'
-import isEmpty from 'licia/isEmpty'
-import each from 'licia/each'
-import clone from 'licia/clone'
-import some from 'licia/some'
+import $ from '../share/native/compat/$'
+import throttle from '../share/native/compat/throttle'
+import isHidden from '../share/native/compat/isHidden'
+import now from '../share/native/compat/now'
+import isEmpty from '../share/native/compat/isEmpty'
+import each from '../share/native/compat/each'
+import clone from '../share/native/compat/clone'
+import some from '../share/native/compat/some'
 
 /** IOptions */
 export interface IOptions extends IComponentOptions {

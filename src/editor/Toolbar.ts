@@ -1,8 +1,8 @@
 import Editor from './index'
 import Component, { IComponentOptions } from '../share/Component'
-import each from 'licia/each'
-import h from 'licia/h'
-import $ from 'licia/$'
+import each from '../share/native/compat/each'
+import h from '../share/native/compat/h'
+import $ from '../share/native/compat/$'
 
 class Action {
   container: HTMLElement = h('button')

@@ -2,7 +2,7 @@ import 'luna-setting.css'
 import Setting from 'luna-setting.js'
 import story from '../share/story'
 import readme from './README.md'
-import { boolean, text } from '@storybook/addon-knobs'
+import { boolean, text } from '../share/storybook/knobs'
 import LunaSetting, {
   LunaSettingTitle,
   LunaSettingMarkdown,

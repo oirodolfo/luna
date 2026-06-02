@@ -1,0 +1,439 @@
+@import "../share/design-system/theme.css";
+
+.luna-markdown-viewer {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: #24292f;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-y: auto;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-markdown-viewer.hidden,
+.luna-markdown-viewer .hidden {
+  display: none !important;
+}
+.luna-markdown-viewer.invisible,
+.luna-markdown-viewer .invisible {
+  visibility: hidden;
+}
+.luna-markdown-viewer * {
+  box-sizing: border-box;
+}
+.luna-markdown-viewer.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: transparent;
+}
+.luna-markdown-viewer details,
+.luna-markdown-viewer figcaption,
+.luna-markdown-viewer figure {
+  display: block;
+}
+.luna-markdown-viewer summary {
+  display: list-item;
+}
+.luna-markdown-viewer [hidden] {
+  display: none !important;
+}
+.luna-markdown-viewer a {
+  background-color: transparent;
+  color: #0969da;
+  text-decoration: none;
+}
+.luna-markdown-viewer a:active,
+.luna-markdown-viewer a:hover {
+  outline-width: 0;
+}
+.luna-markdown-viewer abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+.luna-markdown-viewer b,
+.luna-markdown-viewer strong {
+  font-weight: 600;
+}
+.luna-markdown-viewer dfn {
+  font-style: italic;
+}
+.luna-markdown-viewer h1 {
+  margin: 0.67em 0;
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid hsl(210, 18%, 87%);
+}
+.luna-markdown-viewer mark {
+  background-color: #fff8c5;
+  color: #24292f;
+}
+.luna-markdown-viewer small {
+  font-size: 90%;
+}
+.luna-markdown-viewer sub,
+.luna-markdown-viewer sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.luna-markdown-viewer sub {
+  bottom: -0.25em;
+}
+.luna-markdown-viewer sup {
+  top: -0.5em;
+}
+.luna-markdown-viewer img {
+  cursor: zoom-in;
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #ffffff;
+}
+.luna-markdown-viewer code:not([class^=luna-syntax-highlighter-code]),
+.luna-markdown-viewer kbd,
+.luna-markdown-viewer pre:not([class^=luna-syntax-highlighter]),
+.luna-markdown-viewer samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+.luna-markdown-viewer figure {
+  margin: 1em 40px;
+}
+.luna-markdown-viewer hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid hsl(210, 18%, 87%);
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #d0d7de;
+  border: 0;
+}
+.luna-markdown-viewer a:hover {
+  text-decoration: underline;
+}
+.luna-markdown-viewer hr::before {
+  display: table;
+  content: "";
+}
+.luna-markdown-viewer hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.luna-markdown-viewer table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+.luna-markdown-viewer td,
+.luna-markdown-viewer th {
+  padding: 0;
+}
+.luna-markdown-viewer details summary {
+  cursor: pointer;
+}
+.luna-markdown-viewer details:not([open]) > *:not(summary) {
+  display: none !important;
+}
+.luna-markdown-viewer kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  line-height: 10px;
+  color: #24292f;
+  vertical-align: middle;
+  background-color: #f6f8fa;
+  border: solid 1px rgba(175, 184, 193, 0.2);
+  border-bottom-color: rgba(175, 184, 193, 0.2);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 rgba(175, 184, 193, 0.2);
+}
+.luna-markdown-viewer h1,
+.luna-markdown-viewer h2,
+.luna-markdown-viewer h3,
+.luna-markdown-viewer h4,
+.luna-markdown-viewer h5,
+.luna-markdown-viewer h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.luna-markdown-viewer h2 {
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid hsl(210, 18%, 87%);
+}
+.luna-markdown-viewer h3 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+.luna-markdown-viewer h4 {
+  font-weight: 600;
+  font-size: 1em;
+}
+.luna-markdown-viewer h5 {
+  font-weight: 600;
+  font-size: 0.875em;
+}
+.luna-markdown-viewer h6 {
+  font-weight: 600;
+  font-size: 0.85em;
+  color: #57606a;
+}
+.luna-markdown-viewer p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.luna-markdown-viewer blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: #57606a;
+  border-left: 0.25em solid #d0d7de;
+}
+.luna-markdown-viewer ul,
+.luna-markdown-viewer ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+.luna-markdown-viewer ol ol,
+.luna-markdown-viewer ul ol {
+  list-style-type: lower-roman;
+}
+.luna-markdown-viewer ul ul ol,
+.luna-markdown-viewer ul ol ol,
+.luna-markdown-viewer ol ul ol,
+.luna-markdown-viewer ol ol ol {
+  list-style-type: lower-alpha;
+}
+.luna-markdown-viewer dd {
+  margin-left: 0;
+}
+.luna-markdown-viewer tt,
+.luna-markdown-viewer code:not([class^=luna-syntax-highlighter-code]) {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+}
+.luna-markdown-viewer pre:not([class^=luna-syntax-highlighter]) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+.luna-markdown-viewer a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.luna-markdown-viewer p,
+.luna-markdown-viewer blockquote,
+.luna-markdown-viewer ul,
+.luna-markdown-viewer ol,
+.luna-markdown-viewer dl,
+.luna-markdown-viewer table,
+.luna-markdown-viewer pre:not([class^=luna-syntax-highlighter]),
+.luna-markdown-viewer details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.luna-markdown-viewer blockquote > :first-child {
+  margin-top: 0;
+}
+.luna-markdown-viewer blockquote > :last-child {
+  margin-bottom: 0;
+}
+.luna-markdown-viewer sup > a::before {
+  content: "[";
+}
+.luna-markdown-viewer sup > a::after {
+  content: "]";
+}
+.luna-markdown-viewer ol[type="1"] {
+  list-style-type: decimal;
+}
+.luna-markdown-viewer ol[type=a] {
+  list-style-type: lower-alpha;
+}
+.luna-markdown-viewer ol[type=i] {
+  list-style-type: lower-roman;
+}
+.luna-markdown-viewer div > ol:not([type]) {
+  list-style-type: decimal;
+}
+.luna-markdown-viewer ul ul,
+.luna-markdown-viewer ul ol,
+.luna-markdown-viewer ol ol,
+.luna-markdown-viewer ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.luna-markdown-viewer li > p {
+  margin-top: 16px;
+}
+.luna-markdown-viewer li + li {
+  margin-top: 0.25em;
+}
+.luna-markdown-viewer dl {
+  padding: 0;
+}
+.luna-markdown-viewer dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+.luna-markdown-viewer dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.luna-markdown-viewer table th {
+  font-weight: 600;
+}
+.luna-markdown-viewer table th,
+.luna-markdown-viewer table td {
+  padding: 6px 13px;
+  border: 1px solid #d0d7de;
+}
+.luna-markdown-viewer table tr {
+  background-color: #ffffff;
+  border-top: 1px solid hsl(210, 18%, 87%);
+}
+.luna-markdown-viewer table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+.luna-markdown-viewer table img {
+  background-color: transparent;
+}
+.luna-markdown-viewer img[align=right] {
+  padding-left: 20px;
+}
+.luna-markdown-viewer img[align=left] {
+  padding-right: 20px;
+}
+.luna-markdown-viewer code:not([class^=luna-syntax-highlighter-code]),
+.luna-markdown-viewer tt {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 6px;
+}
+.luna-markdown-viewer code:not([class^=luna-syntax-highlighter-code]) br,
+.luna-markdown-viewer tt br {
+  display: none;
+}
+.luna-markdown-viewer del code:not([class^=luna-syntax-highlighter-code]) {
+  text-decoration: inherit;
+}
+.luna-markdown-viewer pre:not([class^=luna-syntax-highlighter]) code {
+  font-size: 100%;
+}
+.luna-markdown-viewer pre:not([class^=luna-syntax-highlighter]) > code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.luna-markdown-viewer pre:not([class^=luna-syntax-highlighter]) {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+}
+.luna-markdown-viewer pre:not([class^=luna-syntax-highlighter]) code,
+.luna-markdown-viewer pre:not([class^=luna-syntax-highlighter]) tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.theme-dark a {
+  background-color: transparent;
+  color: #58a6ff;
+}
+.theme-dark h1 {
+  border-bottom: 1px solid #21262d;
+}
+.theme-dark mark {
+  background-color: rgba(187, 128, 9, 0.15);
+  color: #c9d1d9;
+}
+.theme-dark img {
+  background-color: #0d1117;
+}
+.theme-dark hr {
+  border-bottom: 1px solid #21262d;
+  background-color: #30363d;
+}
+.theme-dark kbd {
+  color: #c9d1d9;
+  background-color: #161b22;
+  border: solid 1px rgba(110, 118, 129, 0.4);
+  border-bottom-color: rgba(110, 118, 129, 0.4);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 rgba(110, 118, 129, 0.4);
+}
+.theme-dark h2 {
+  border-bottom: 1px solid #21262d;
+}
+.theme-dark h6 {
+  color: #8b949e;
+}
+.theme-dark blockquote {
+  color: #8b949e;
+  border-left: 0.25em solid #30363d;
+}
+.theme-dark .absent {
+  color: #f85149;
+}
+.theme-dark table th,
+.theme-dark table td {
+  border: 1px solid #30363d;
+}
+.theme-dark table tr {
+  background-color: #0d1117;
+  border-top: 1px solid #21262d;
+}
+.theme-dark table tr:nth-child(2n) {
+  background-color: #161b22;
+}
+.theme-dark table img {
+  background-color: transparent;
+}
+.theme-dark code:not([class^=luna-syntax-highlighter-code]),
+.theme-dark tt {
+  background-color: rgba(110, 118, 129, 0.4);
+}
+.theme-dark pre:not([class^=luna-syntax-highlighter]) {
+  background-color: #161b22;
+}

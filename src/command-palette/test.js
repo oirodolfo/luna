@@ -1,4 +1,4 @@
-import trim from 'licia/trim'
+import trim from '../share/native/compat/trim'
 import CommandPalette from './index'
 import test from '../share/test'
 

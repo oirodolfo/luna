@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from 'react'
 import IconList, { IOptions, IIcon, Icon } from './index'
 import { useEvent, useOption, usePrevious } from '../share/hooks'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 
 interface IIconListProps extends IOptions {
   className?: string

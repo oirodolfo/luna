@@ -1,5 +1,5 @@
 import SplitPane from './index'
-import toEl from 'licia/toEl'
+import toEl from '../share/native/compat/toEl'
 import test from '../share/test'
 
 test('split-pane', (container) => {

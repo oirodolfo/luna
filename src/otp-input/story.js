@@ -1,9 +1,9 @@
 import 'luna-otp-input.css'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 import OtpInput from 'luna-otp-input.js'
 import story from '../share/story'
 import readme from './README.md'
-import { number } from '@storybook/addon-knobs'
+import { number } from '../share/storybook/knobs'
 import LunaOtpInput from './react'
 
 const def = story(

@@ -1,0 +1,151 @@
+@import "../share/design-system/theme.css";
+
+.luna-shader-toy-player {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  position: relative;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-shader-toy-player.hidden,
+.luna-shader-toy-player .hidden {
+  display: none !important;
+}
+.luna-shader-toy-player.invisible,
+.luna-shader-toy-player .invisible {
+  visibility: hidden;
+}
+.luna-shader-toy-player * {
+  box-sizing: border-box;
+}
+.luna-shader-toy-player.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+.luna-shader-toy-player {
+  background: #000;
+}
+
+.luna-shader-toy-player:hover .controller {
+  opacity: 1;
+}
+.luna-shader-toy-player.controller-hidden {
+  cursor: none;
+}
+.luna-shader-toy-player.controller-hidden .controller {
+  opacity: 0;
+}
+.luna-shader-toy-player.controller-hidden .controller:hover {
+  opacity: 1;
+}
+
+.controller {
+  cursor: default;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  height: 41px;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 0;
+  transition: opacity 0.3s;
+}
+.controller.active {
+  opacity: 1 !important;
+}
+
+.controller-mask {
+  position: absolute;
+  pointer-events: none;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==) repeat-x bottom;
+}
+
+.controller-left,
+.controller-right {
+  height: 38px;
+  position: absolute;
+  bottom: 0;
+}
+.controller-left .icon,
+.controller-right .icon {
+  vertical-align: top;
+  cursor: pointer;
+  color: #eee;
+  height: 100%;
+  line-height: 38px;
+}
+.controller-left .icon:hover,
+.controller-right .icon:hover {
+  color: #fff;
+}
+
+.controller-left {
+  left: 20px;
+}
+
+.controller-right {
+  right: 20px;
+}
+.controller-right .icon {
+  margin-left: 8px;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+.canvas canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.reset,
+.play,
+.volume {
+  margin-right: 8px;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.time,
+.fps-button,
+.resolution {
+  color: #eee;
+  font-size: 12px;
+  line-height: 38px;
+}
+
+.fps-button {
+  cursor: pointer;
+}
+
+.fps {
+  opacity: 0;
+  position: absolute;
+  font-size: 12px;
+  top: 0;
+  right: 0;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: opacity 0.3s;
+}
+.fps.active {
+  opacity: 1;
+}

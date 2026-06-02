@@ -4,7 +4,7 @@ import BarChart from './BarChart'
 import LineChart from './LineChart'
 import PieChart from './PieChart'
 import RingChart from './RingChart'
-import defaults from 'licia/defaults'
+import defaults from '../share/native/compat/defaults'
 import { DeepRequired } from '../share/types'
 import { px } from './util'
 

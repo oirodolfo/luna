@@ -1,16 +1,16 @@
-import stripIndent from 'licia/stripIndent'
-import $ from 'licia/$'
-import openFile from 'licia/openFile'
-import createUrl from 'licia/createUrl'
-import fullscreen from 'licia/fullscreen'
-import keyCode from 'licia/keyCode'
-import some from 'licia/some'
-import escapeJsStr from 'licia/escapeJsStr'
+import stripIndent from '../share/native/compat/stripIndent'
+import $ from '../share/native/compat/$'
+import openFile from '../share/native/compat/openFile'
+import createUrl from '../share/native/compat/createUrl'
+import fullscreen from '../share/native/compat/fullscreen'
+import keyCode from '../share/native/compat/keyCode'
+import some from '../share/native/compat/some'
+import escapeJsStr from '../share/native/compat/escapeJsStr'
 import Component, { IComponentOptions } from '../share/Component'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const bootstrap = require('!raw-loader!./bootstrap').default
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const trigger = require('licia/trigger')
+const trigger = require('../share/native/compat/trigger')
 
 /** IOptions */
 export interface IOptions extends IComponentOptions {

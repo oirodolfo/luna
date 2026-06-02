@@ -1,0 +1,119 @@
+@import "../share/design-system/theme.css";
+
+.luna-markdown-editor {
+  border: 1px solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-markdown-editor.hidden,
+.luna-markdown-editor .hidden {
+  display: none !important;
+}
+.luna-markdown-editor.invisible,
+.luna-markdown-editor .invisible {
+  visibility: hidden;
+}
+.luna-markdown-editor * {
+  box-sizing: border-box;
+}
+.luna-markdown-editor.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+.luna-markdown-editor.fullscreen {
+  position: fixed;
+  width: 100% !important;
+  height: 100% !important;
+  left: 0;
+  top: 0;
+  border: none;
+}
+.luna-markdown-editor.fullscreen .textarea,
+.luna-markdown-editor.fullscreen .preview-container {
+  height: 100% !important;
+}
+
+.toolbar {
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 0;
+}
+
+.button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.88);
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+}
+.button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+.button.active {
+  color: #1a73e8;
+}
+
+.body {
+  position: relative;
+  font-size: 0;
+  height: 100%;
+}
+
+.textarea {
+  padding: 8px;
+  margin: 0;
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: vertical;
+  min-height: 100px;
+  height: 300px;
+  font-family: inherit;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.preview-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 8px;
+  background: #ffffff;
+}
+
+.theme-dark {
+  border-color: #424242;
+}
+.theme-dark .toolbar {
+  border-color: #424242;
+}
+.theme-dark .toolbar,
+.theme-dark .button {
+  background: #141414;
+}
+.theme-dark .button {
+  color: rgba(255, 255, 255, 0.85);
+}
+.theme-dark .textarea {
+  color: rgba(255, 255, 255, 0.85);
+}
+.theme-dark .textarea,
+.theme-dark .preview-container {
+  background: #141414;
+}

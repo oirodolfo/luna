@@ -1,9 +1,9 @@
 import Tool from './Tool'
-import Color from 'licia/Color'
-import isEqual from 'licia/isEqual'
+import Color from '../share/native/compat/Color'
+import isEqual from '../share/native/compat/isEqual'
 import Painter from '../'
 import { colorDistance } from '../util'
-import hotkey from 'licia/hotkey'
+import hotkey from '../share/native/compat/hotkey'
 
 export default class PaintBucket extends Tool {
   constructor(painter: Painter) {

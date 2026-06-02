@@ -1,0 +1,24 @@
+@import "../share/design-system/theme.css";
+
+.luna-virtual-list {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  position: relative;
+  will-change: scroll-position;
+  transform: translate3d(0, 0, 0);
+}
+
+.fake-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.items {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

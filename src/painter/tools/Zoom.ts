@@ -1,9 +1,9 @@
 import Tool from './Tool'
 import Painter from '../index'
 import Hand from './Hand'
-import Tween from 'licia/Tween'
-import $ from 'licia/$'
-import h from 'licia/h'
+import Tween from '../share/native/compat/Tween'
+import $ from '../share/native/compat/$'
+import h from '../share/native/compat/h'
 import { eventPage } from '../../share/util'
 
 interface IPivot {

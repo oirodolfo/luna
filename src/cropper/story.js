@@ -3,9 +3,9 @@ import Cropper from 'luna-cropper.js'
 import LunaCropper from './react'
 import readme from './README.md'
 import story from '../share/story'
-import h from 'licia/h'
-import $ from 'licia/$'
-import { text } from '@storybook/addon-knobs'
+import h from '../share/native/compat/h'
+import $ from '../share/native/compat/$'
+import { text } from '../share/storybook/knobs'
 import { useState } from 'react'
 
 const def = story(

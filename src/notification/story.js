@@ -1,9 +1,9 @@
 import 'luna-notification.css'
 import Notification from 'luna-notification.js'
 import readme from './README.md'
-import { select, text, number, button, boolean } from '@storybook/addon-knobs'
+import { select, text, number, button, boolean } from '../share/storybook/knobs'
 import story from '../share/story'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 
 const def = story(
   'notification',

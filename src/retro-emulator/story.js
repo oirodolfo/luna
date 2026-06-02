@@ -1,9 +1,9 @@
 import 'luna-retro-emulator.css'
 import story from '../share/story'
 import RetroEmulator from 'luna-retro-emulator.js'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 import readme from './README.md'
-import { optionsKnob, button, text } from '@storybook/addon-knobs'
+import { optionsKnob, button, text } from '../share/storybook/knobs'
 
 const def = story(
   'retro-emulator',

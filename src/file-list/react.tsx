@@ -1,6 +1,6 @@
 import { FC, useEffect, useRef } from 'react'
 import FileList, { IOptions, IFile } from './index'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 import { useEvent, useOption, usePrevious } from '../share/hooks'
 
 interface IFileListProps extends IOptions {

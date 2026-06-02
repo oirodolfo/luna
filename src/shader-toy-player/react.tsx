@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from 'react'
 import ShaderToyPlayer, { IOptions } from './index'
 import { useOption } from '../share/hooks'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 
 interface IShaderToyPlayerProps extends IOptions {
   className?: string

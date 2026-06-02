@@ -1,28 +1,107 @@
 name: CI
 
 on:
-  workflow_dispatch:
   push:
     branches:
-      - 'master'
-    paths:
-      - 'src/**/*'
-      - 'lib/**/*'
+      - master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  ci:
-
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '18.x'
-    - run: |
-        npm i
-        npm link
-        npm run ci
-    - uses: codecov/codecov-action@v4
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }} 
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Enable pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.15.9 --activate
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test
+
+      - name: Guard licia removal
+        run: pnpm check:no-licia
+
+      - name: Guard SCSS removal
+        run: pnpm check:no-scss
+
+      - name: Build packages
+        run: pnpm build
+
+      - name: Build Storybook
+        run: pnpm build:storybook
+
+      - name: Verify outputs
+        run: |
+          test -f .storybook/out/index.html
+          test -d dist
+          find dist -maxdepth 2 -name 'package.json' | grep .
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .storybook/out
+
+      - name: Upload build summary to gist
+        if: ${{ vars.LUNA_GIST_ID != '' && secrets.GIST_TOKEN != '' }}
+        env:
+          GIST_ID: ${{ vars.LUNA_GIST_ID }}
+          GITHUB_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          summary = {
+              'storybook': sorted(str(path) for path in Path('.storybook/out').glob('*') if path.is_file()),
+              'dist': sorted(str(path) for path in Path('dist').glob('*')),
+          }
+          Path('/tmp/luna-build-summary.json').write_text(json.dumps(summary, indent=2))
+          PY
+          curl -sS -X PATCH \
+            -H "Authorization: ******" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/gists/${GIST_ID} \
+            -d @<(python - <<'PY'
+          import json
+          from pathlib import Path
+          print(json.dumps({
+            'files': {
+              'luna-build-summary.json': {
+                'content': Path('/tmp/luna-build-summary.json').read_text()
+              }
+            }
+          }))
+          PY
+          )
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

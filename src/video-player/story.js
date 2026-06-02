@@ -1,10 +1,10 @@
 import 'luna-video-player.css'
 import story from '../share/story'
 import VideoPlayer from 'luna-video-player.js'
-import $ from 'licia/$'
+import $ from '../share/native/compat/$'
 import readme from './README.md'
 import changelog from './CHANGELOG.md'
-import { text } from '@storybook/addon-knobs'
+import { text } from '../share/storybook/knobs'
 import LunaVideoPlayer from './react'
 
 const def = story(

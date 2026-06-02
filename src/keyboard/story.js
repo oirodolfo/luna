@@ -2,8 +2,8 @@ import 'luna-keyboard.css'
 import Keyboard from 'luna-keyboard.js'
 import readme from './README.md'
 import story from '../share/story'
-import h from 'licia/h'
-import $ from 'licia/$'
+import h from '../share/native/compat/h'
+import $ from '../share/native/compat/$'
 
 const def = story(
   'keyboard',

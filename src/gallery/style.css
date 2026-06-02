@@ -1,0 +1,118 @@
+@import "../share/design-system/theme.css";
+
+.luna-gallery {
+  position: relative;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-gallery.hidden,
+.luna-gallery .hidden {
+  display: none !important;
+}
+.luna-gallery.invisible,
+.luna-gallery .invisible {
+  visibility: hidden;
+}
+.luna-gallery * {
+  box-sizing: border-box;
+}
+.luna-gallery.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+.luna-gallery {
+  background: black;
+}
+.luna-gallery.full {
+  position: fixed;
+  backdrop-filter: blur(2px);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.luna-gallery .luna-toolbar {
+  height: 30px;
+  border-bottom: none;
+}
+.luna-gallery .luna-carousel {
+  background: transparent;
+}
+.luna-gallery .luna-carousel-indicators {
+  display: none;
+}
+.luna-gallery .luna-image-viewer {
+  border: none;
+}
+.luna-gallery:hover .toolbar {
+  opacity: 1;
+}
+
+.no-scrollbar {
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.image img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.image .viewer {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.title {
+  color: #eee;
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px 40px;
+}
+
+.toolbar {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.3s;
+}
+
+.theme-light.full {
+  background-color: rgba(0, 0, 0, 0.45);
+  background-color: var(--luna-color-bg-mask, rgba(0, 0, 0, 0.45));
+}
+.theme-light .toolbar.luna-toolbar {
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+}
+
+.theme-dark.full {
+  background-color: rgba(0, 0, 0, 0.45);
+  background-color: var(--luna-color-bg-mask, rgba(0, 0, 0, 0.45));
+}
+.theme-dark .toolbar.luna-toolbar {
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container, #141414);
+}

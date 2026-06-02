@@ -1,11 +1,11 @@
 import Component, { IComponentOptions } from '../share/Component'
-import stripIndent from 'licia/stripIndent'
-import $ from 'licia/$'
+import stripIndent from '../share/native/compat/stripIndent'
+import $ from '../share/native/compat/$'
 import Toolbar from './Toolbar'
 import Selection from './Selection'
-import isArr from 'licia/isArr'
-import h from 'licia/h'
-import concat from 'licia/concat'
+import isArr from '../share/native/compat/isArr'
+import h from '../share/native/compat/h'
+import concat from '../share/native/compat/concat'
 
 interface IOptions extends IComponentOptions {
   toolbar?: string[] | Toolbar

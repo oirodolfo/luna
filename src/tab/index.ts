@@ -1,8 +1,8 @@
 import Component, { IComponentOptions } from '../share/Component'
-import stripIndent from 'licia/stripIndent'
-import $ from 'licia/$'
-import escape from 'licia/escape'
-import isNum from 'licia/isNum'
+import stripIndent from '../share/native/compat/stripIndent'
+import $ from '../share/native/compat/$'
+import escape from '../share/native/compat/escape'
+import isNum from '../share/native/compat/isNum'
 import { measuredScrollbarWidth, exportCjs } from '../share/util'
 
 /** ITab */

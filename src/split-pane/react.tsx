@@ -10,8 +10,8 @@ import {
 } from 'react'
 import SplitPane, { IOptions, IElOptions } from './index'
 import { useEvent, useForceUpdate, usePrevious } from '../share/hooks'
-import pick from 'licia/pick'
-import isUndef from 'licia/isUndef'
+import pick from '../share/native/compat/pick'
+import isUndef from '../share/native/compat/isUndef'
 
 interface ISplitPaneProps extends IOptions {
   style?: CSSProperties

@@ -15,7 +15,7 @@ import {
   useOption,
   usePrevious,
 } from '../share/hooks'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 
 interface ITabProps extends IOptions {
   className?: string

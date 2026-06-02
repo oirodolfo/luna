@@ -1,10 +1,10 @@
 import 'luna-editor.css'
 import Editor from 'luna-editor.js'
-import h from 'licia/h'
-import $ from 'licia/$'
+import h from '../share/native/compat/h'
+import $ from '../share/native/compat/$'
 import story from '../share/story'
 import readme from './README.md'
-import { text } from '@storybook/addon-knobs'
+import { text } from '../share/storybook/knobs'
 import MarkdownIt from 'markdown-it'
 
 const md = new MarkdownIt({ linkify: true })

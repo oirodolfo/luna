@@ -1,11 +1,11 @@
 import { eventPage, exportCjs, mediaDurationFormat } from '../share/util'
 import Component, { IComponentOptions } from '../share/Component'
 import WaveSurfer from 'wavesurfer.js'
-import stripIndent from 'licia/stripIndent'
-import $ from 'licia/$'
-import pointerEvent from 'licia/pointerEvent'
-import clamp from 'licia/clamp'
-import escape from 'licia/escape'
+import stripIndent from '../share/native/compat/stripIndent'
+import $ from '../share/native/compat/$'
+import pointerEvent from '../share/native/compat/pointerEvent'
+import clamp from '../share/native/compat/clamp'
+import escape from '../share/native/compat/escape'
 
 const $document = $(document as any)
 

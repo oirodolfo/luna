@@ -1,13 +1,13 @@
-import normalizePath from 'licia/normalizePath'
+import normalizePath from '../share/native/compat/normalizePath'
 import Component, { IComponentOptions } from '../share/Component'
 import { exportCjs } from '../share/util'
-import $ from 'licia/$'
-import trim from 'licia/trim'
-import each from 'licia/each'
-import escape from 'licia/escape'
-import toEl from 'licia/toEl'
-import filter from 'licia/filter'
-import isStrBlank from 'licia/isStrBlank'
+import $ from '../share/native/compat/$'
+import trim from '../share/native/compat/trim'
+import each from '../share/native/compat/each'
+import escape from '../share/native/compat/escape'
+import toEl from '../share/native/compat/toEl'
+import filter from '../share/native/compat/filter'
+import isStrBlank from '../share/native/compat/isStrBlank'
 
 /** IOptions */
 export interface IOptions extends IComponentOptions {

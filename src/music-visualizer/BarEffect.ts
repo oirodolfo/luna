@@ -1,4 +1,4 @@
-import isEmpty from 'licia/isEmpty'
+import isEmpty from '../share/native/compat/isEmpty'
 import MusicVisualizer, { IEffect } from './index'
 
 interface IBar {

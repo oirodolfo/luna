@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react'
 import { classPrefix, getPlatform } from './util'
-import className from 'licia/className'
+import className from './native/compat/className'
 
 interface IComponentProps {
   compName: string

@@ -1,0 +1,107 @@
+@import "../share/design-system/theme.css";
+
+.luna-scrollbar {
+  position: relative;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-scrollbar.hidden,
+.luna-scrollbar .hidden {
+  display: none !important;
+}
+.luna-scrollbar.invisible,
+.luna-scrollbar .invisible {
+  visibility: hidden;
+}
+.luna-scrollbar * {
+  box-sizing: border-box;
+}
+.luna-scrollbar.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: transparent;
+}
+.luna-scrollbar:hover .track {
+  opacity: 1;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.offset {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.content-wrapper::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.track {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.track.active {
+  opacity: 1;
+}
+
+.thumb {
+  position: absolute;
+  touch-action: none;
+  border-radius: 3px;
+}
+
+.horizontal {
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  height: 6px;
+}
+.horizontal .thumb {
+  top: 0;
+  bottom: 0;
+}
+
+.vertical {
+  top: 2px;
+  bottom: 2px;
+  right: 2px;
+  width: 6px;
+}
+.vertical .thumb {
+  left: 0;
+  right: 0;
+}
+
+.theme-light .thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  background-color: var(--luna-color-fill, rgba(0, 0, 0, 0.15));
+}
+
+.theme-dark .thumb {
+  background-color: rgba(255, 255, 255, 0.18);
+  background-color: var(--luna-color-fill, rgba(255, 255, 255, 0.18));
+}

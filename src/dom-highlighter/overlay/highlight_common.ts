@@ -28,7 +28,7 @@
 //  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 //  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import endWith from 'licia/endWith';
+import endWith from '../share/native/compat/endWith';
 import {rgbaToHsla} from './ColorUtils';
 
 import type {Bounds, PathCommands, Quad} from './common';

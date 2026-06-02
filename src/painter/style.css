@@ -1,0 +1,230 @@
+@import "../share/design-system/theme.css";
+
+.luna-painter {
+  position: relative;
+  padding-left: 40px;
+  padding-top: 30px;
+  width: 100%;
+  height: 600px;
+  border: 1px solid;
+  outline: none;
+  color: rgba(0, 0, 0, 0.88);
+  color: var(--luna-color-text, rgba(0, 0, 0, 0.88));
+  background-color: #ffffff;
+  background-color: var(--luna-color-bg-container, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 14px;
+}
+.luna-painter.hidden,
+.luna-painter .hidden {
+  display: none !important;
+}
+.luna-painter.invisible,
+.luna-painter .invisible {
+  visibility: hidden;
+}
+.luna-painter * {
+  box-sizing: border-box;
+}
+.luna-painter.theme-dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.85);
+  color: var(--luna-color-text-dark, rgba(255, 255, 255, 0.85));
+  background-color: #141414;
+  background-color: var(--luna-color-bg-container-dark, #141414);
+}
+
+.toolbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid;
+  overflow: hidden;
+}
+.toolbar .luna-toolbar {
+  border-bottom: none;
+}
+
+.tool-box {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 40px;
+  height: calc(100% - 30px);
+  border-right: 1px solid;
+}
+
+.tool {
+  width: 30px;
+  margin: 5px auto;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  padding: 2px 0;
+}
+.tool .icon {
+  position: relative;
+  top: 2px;
+}
+
+.palette {
+  width: 34px;
+  height: 50px;
+  margin: 3px auto;
+}
+
+.palette-head {
+  display: flex;
+}
+.palette-head span {
+  flex: 1;
+  font-size: 12px;
+  text-align: center;
+}
+
+.palette-body {
+  position: relative;
+  margin-top: 4px;
+}
+
+.palette-foreground,
+.palette-background {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+}
+.palette-foreground input,
+.palette-background input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 1px solid #fff;
+}
+.palette-foreground input::-webkit-color-swatch-wrapper,
+.palette-background input::-webkit-color-swatch-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+}
+.palette-foreground input::-webkit-color-swatch,
+.palette-background input::-webkit-color-swatch {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+}
+
+.palette-foreground {
+  left: 2px;
+  top: 0;
+  z-index: 5;
+}
+
+.palette-background {
+  left: 12px;
+  top: 10px;
+}
+
+.viewport-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: none;
+}
+
+.viewport {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.viewport-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cursor {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+.cursor .icon {
+  color: #000;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-wrapper {
+  margin: auto;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+
+.canvas-container {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC");
+  font-size: 0;
+}
+
+.main-canvas {
+  image-rendering: pixelated;
+}
+
+.theme-light {
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+.theme-light .toolbar,
+.theme-light .tool-box {
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+.theme-light .tool:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  background-color: var(--luna-color-fill-tertiary, rgba(0, 0, 0, 0.04));
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+.theme-light .tool.selected {
+  background-color: rgba(0, 0, 0, 0.06);
+  background-color: var(--luna-color-fill-secondary, rgba(0, 0, 0, 0.06));
+  border-color: #d9d9d9;
+  border-color: var(--luna-color-border, #d9d9d9);
+}
+
+.theme-dark {
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}
+.theme-dark .toolbar,
+.theme-dark .tool-box {
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}
+.theme-dark .tool:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  background-color: var(--luna-color-fill-tertiary, rgba(255, 255, 255, 0.08));
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}
+.theme-dark .tool.selected {
+  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--luna-color-fill-secondary, rgba(255, 255, 255, 0.12));
+  border-color: #424242;
+  border-color: var(--luna-color-border, #424242);
+}

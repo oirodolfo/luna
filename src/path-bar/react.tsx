@@ -1,6 +1,6 @@
 import { CSSProperties, FC, useEffect, useRef } from 'react'
 import PathBar, { IOptions } from './index'
-import each from 'licia/each'
+import each from '../share/native/compat/each'
 import { useEvent, useOption, usePrevious } from '../share/hooks'
 
 interface IPathBarProps extends IOptions {

@@ -1,6 +1,6 @@
 import MusicVisualizer, { IEffect } from './index'
-import random from 'licia/random'
-import isEmpty from 'licia/isEmpty'
+import random from '../share/native/compat/random'
+import isEmpty from '../share/native/compat/isEmpty'
 
 export default class LineEffect implements IEffect {
   private musicVisualizer: MusicVisualizer

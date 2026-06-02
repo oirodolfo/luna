@@ -2,7 +2,7 @@ import 'luna-tab.css'
 import Tab from 'luna-tab.js'
 import readme from './README.md'
 import story from '../share/story'
-import { number } from '@storybook/addon-knobs'
+import { number } from '../share/storybook/knobs'
 import LunaTab, { LunaTabItem } from './react'
 
 const def = story(

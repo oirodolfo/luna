@@ -2,8 +2,8 @@ import 'luna-painter.css'
 import Painter from 'luna-painter.js'
 import story from '../share/story'
 import readme from './README.md'
-import { number } from '@storybook/addon-knobs'
-import $ from 'licia/$'
+import { number } from '../share/storybook/knobs'
+import $ from '../share/native/compat/$'
 import LunaPainter from './react'
 
 const def = story(

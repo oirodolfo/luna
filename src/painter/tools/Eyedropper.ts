@@ -1,7 +1,7 @@
 import Tool from './Tool'
 import Painter from '../'
-import hex from 'licia/hex'
-import contain from 'licia/contain'
+import hex from '../share/native/compat/hex'
+import contain from '../share/native/compat/contain'
 
 export default class Eyedropper extends Tool {
   private isAltDown = false

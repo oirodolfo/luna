@@ -2,8 +2,8 @@ import 'luna-menu-bar.css'
 import MenuBar from 'luna-menu-bar.js'
 import story from '../share/story'
 import readme from './README.md'
-import { object } from '@storybook/addon-knobs'
-import cloneDeep from 'licia/cloneDeep'
+import { object } from '../share/storybook/knobs'
+import cloneDeep from '../share/native/compat/cloneDeep'
 
 const def = story(
   'menu-bar',

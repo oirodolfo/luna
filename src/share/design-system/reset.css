@@ -1,0 +1,4 @@
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+body{margin:0;font-family:var(--luna-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);background:var(--luna-color-bg-base,#fff);color:var(--luna-color-text,rgba(0,0,0,.88));}
+button,input,select,textarea{font:inherit;}
